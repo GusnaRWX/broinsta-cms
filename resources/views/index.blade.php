@@ -10,13 +10,14 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="{{ asset('public/assets/img/favicon.png') }}" rel="icon">
-    <link href="{{ asset('public/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+    
+    <link rel="icon" href="{{ asset('assets/img/favicon.png') }}" type="image/x-icon"/>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
     <!-- CSS only -->
+    <link rel="stylesheet" href="{{ asset('assets/vendor/icofont/icofont.min.css') }}">
     <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/vendor/animate.css/animate.min.css') }}" rel="stylesheet">
@@ -73,6 +74,7 @@
         </div>
     </header>
     <!-- End Header -->
+
     <!-- ======= Top Bar ======= -->
     <div id="topbar" class="d-flex d-lg-flex align-items-center fixed-top">
         <div class="container-fluid d-flex px-da">
@@ -174,13 +176,13 @@
                                             <div class="card-header">
                                                 <ul class="nav nav-tabs card-header-tabs" id="bologna-list" role="tablist">
                                                     <li class="nav-item" style="position: relative; left: -1px;">
-                                                        <a class="nav-link active hover-style" href="#description" role="tab" aria-controls="description" aria-selected="true" style="box-shadow: none!important;"><i class="now-ui-icons objects_umbrella-13"></i></a>
+                                                        <a class="nav-link active hover-style" href="#description" role="tab" aria-controls="description" aria-selected="true" style="box-shadow: none!important; font-size: 32px;"><i class="icofont-dollar"></i></a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link hover-style" href="#history" role="tab" aria-controls="history" aria-selected="false" style="box-shadow: none!important;"><i class="now-ui-icons objects_umbrella-13"></i></a>
+                                                        <a class="nav-link hover-style" href="#history" role="tab" aria-controls="history" aria-selected="false" style="box-shadow: none!important; font-size: 32px;"><i class="icofont-database"></i></a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link hover-style" href="#deals" role="tab" aria-controls="deals" aria-selected="false" style="box-shadow: none!important;"><i class="now-ui-icons objects_umbrella-13"></i></a>
+                                                        <a class="nav-link hover-style" href="#deals" role="tab" aria-controls="deals" aria-selected="false" style="box-shadow: none!important; font-size: 32px;"><i class="icofont-people"></i></a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -271,23 +273,45 @@
 
                                                     <div class="tab-pane" id="history" role="tabpanel" aria-labelledby="history-tab">
                                                         <div class="deposit-title">
-                                                            <h4>TEst</h4>
+                                                            <h4>Withdraw</h4>
                                                         </div>
                                                         <div class="card-form">
                                                             <p class="card-text">Broinsta adalah IB (Introduction Broker) atau perwaklian resmi dari Insta Forex Indonesia yang didirikan dengan tujuan untuk membantu. </p>
                                                             <hr>
-                                                            <a href="#" class="card-link text-danger">Read more</a>
+                                                            <form action="">
+                                                                <div class="form-group">
+                                                                    <label for="inputAddress">Nomor akun Broninsta</label>
+                                                                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="inputAddress">Password</label>
+                                                                    <input type="password" class="form-control" id="inputAddress" placeholder="your password here">
+                                                                </div>
+
+                                                                <button type="submit" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#formWithdraw" id="submitWitdraw">Submit</button>
+                                                            </form>
                                                         </div>
                                                     </div>
 
                                                     <div class="tab-pane" id="deals" role="tabpanel" aria-labelledby="deals-tab">
                                                         <div class="deposit-title">
-                                                            <h4>tasdasd</h4>
+                                                            <h4>Account</h4>
                                                         </div>
                                                         <div class="card-form">
                                                             <p class="card-text">Broinsta adalah IB (Introduction Broker) atau perwaklian resmi dari Insta Forex Indonesia yang didirikan dengan tujuan untuk membantu. </p>
                                                             <hr>
-                                                            <a href="#" class="card-link text-danger">Read more</a>
+                                                            <form action="">
+                                                                <div class="form-group">
+                                                                    <label for="inputAddress">Nomor akun Broninsta</label>
+                                                                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="inputAddress">Password</label>
+                                                                    <input type="password" class="form-control" id="inputAddress" placeholder="your password here">
+                                                                </div>
+
+                                                                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                                                            </form>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -313,7 +337,7 @@
                                 <div class="oprasional my-3">
                                     <img src="{{ asset('assets/img/icon/clock.svg') }}" alt="" width="40px" height="40px" style="position: relative;top: -8px;">
                                     <span class="textTime" style="display: inline-block;">
-                                        <b>Senin-Jumat</b> <br>{{ $support->operational_time }}</span>
+                                        <b>Senin-Jumat</b> <br>{{ $support->oprational_time }}</span>
                                 </div>
 
                                 <hr>
@@ -324,7 +348,7 @@
                                 <div class="oprasional my-3">
                                     <img src="{{ asset('assets/img/icon/telephone.svg') }}" alt="" width="40px" height="40px" style="position: relative;top: -8px;">
                                     <span class="textTime" style="display: inline-block;"><b>Call / SMS</b> <br> {{ $support->phone }}</span>
-                                    <span class="textTime" style="display: inline-block;"><b>Call / SMS</b> <br> {{ $support->phone }}</span>
+                                    <span class="textTime" style="display: inline-block;"><b>Call / SMS</b> <br> {{ $support->phone_2 }}</span>
                                 </div>
 
                                 <hr>
@@ -442,8 +466,14 @@ x
             </div>
         </section>
         <!-- End Featured Services Section -->
+
+        <a href="https://api.whatsapp.com/send?phone=6281297818078." class="float" target="_blank">
+            <i class="icofont-brand-whatsapp my-float"></i>
+        </a>
     </main>
     <!-- End #main -->
+
+    
 
     <div id="tallModal" class="modal modal-wide fade">
         <div class="modal-dialog">
@@ -461,6 +491,43 @@ x
           </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
       </div><!-- /.modal -->
+
+
+
+      {{-- modal form Withdraw--}}
+      <div class="modal fade modal-form" id="formWithdraw" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                    <h5 class="modal-title" id="exampleModalLabel">Create Account</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+                <form>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="email1">Email address</label>
+                            <input type="email" class="form-control" id="email1" aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">Your information is safe with us.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="password1">Password</label>
+                            <input type="password" class="form-control" id="password1" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <label for="password1">Confirm Password</label>
+                            <input type="password" class="form-control" id="password2" placeholder="Confirm Password">
+                        </div>
+                    </div>
+                    <div class="modal-footer border-top-0 d-flex justify-content-center">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    {{-- end modal Form Withdraw --}}
 
 
     <!-- ======= Footer ======= -->
@@ -492,10 +559,18 @@ x
     <script src="{{ asset('assets/js/main.js') }}"></script>
 
     <script>
+
+
+
         $(document).ready(function() {
   $('#tallModal').modal('show');
 
 });
+
+
+$('#submitWitdraw').on('click', function(e) {
+            e.preventDefault() 
+        })
 
 $('#bologna-list a').on('click', function(e) {
             e.preventDefault()
@@ -517,6 +592,8 @@ $('#bologna-list a').on('click', function(e) {
             });
         });
     </script>
+
+
 
 </body>
 
