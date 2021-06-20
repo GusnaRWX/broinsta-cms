@@ -16,6 +16,7 @@ use App\Http\Controllers\IndexController;
 
 Route::group(['prefix' => '/'], function () {
     Route::get('/', 'App\Http\Controllers\IndexController@getIndex');
+    Route::post('/', 'App\Http\Controllers\IndexController@store')->name('deposit.index');
 });
 
 

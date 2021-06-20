@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Kurse;
 use App\Models\Support;
 use App\Models\Testimonial;
+use App\Models\Deposit;
 
 class IndexController extends Controller
 {
@@ -15,5 +16,27 @@ class IndexController extends Controller
         $supports = Support::all();
         $testimonials = Testimonial::all();
         return view('content.konten', ['kurses' => $kurses, 'supports' => $supports, 'testimonials' => $testimonials]);
+    }
+
+    public function store(Request $request){
+        $deposit = new Deposit;
+        $deposit->account_number = $request->get('account_number');
+        $deposit->deposit = $request->get('deposit');
+        $deposit->transfer = $request->get('transfer');
+        $deposit->email = $request->get('email');
+        $deposit->phone = $request->get('phone');
+        $deposit->bank_transfer = $request->get('bank_transfer');
+        $deposit->bank = $request->get('bank');
+        $deposit->no_rek = $request->get('no_rek');
+        $deposit->name_rek = $request->get('name_rek');
+
+        if($request->file('file')){
+            $image_path = $request->file('file')->store('assets/deposit', 'public');
+        }
+        $deposit->file = $image_path;
+        $deposit->save();
+
+        return redirect()->view('content.konten');
+
     }
 }
