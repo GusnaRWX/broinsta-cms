@@ -17,13 +17,11 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
     <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/animate.css/animate.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/vendor/owl.carousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/vendor/venobox/venobox.css') }}" rel="stylesheet">
-    <!-- JavaScript Bundle with Popper -->
-    <script href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 
     <!-- Template Main CSS File -->
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet" type="text/css">
@@ -139,20 +137,16 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach ($kurses as $kurse)
                                         <tr>
-                                            <td>Member</td>
-                                            <td>14.100</td>
-                                            <td>14.100</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Regular</td>
-                                            <td>14.100</td>
-                                            <td>14.100</td>
-                                        </tr>
+                                            <td>{{ $kurse->title }}</td>
+                                            <td>{{ $kurse->deposit }}</td>
+                                            <td>{{ $kurse->withdraw }}</td>
 
+                                        </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
-
                                 <div class="row">
                                     <div class="col-md-6 ">
                                         <div class="buatAkun">
@@ -268,10 +262,8 @@
                                                                 <div class="form-group">
                                                                     <label for="exampleFormControlFile1">Sisipkan bukti pembayaran</label>
                                                                     <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                                                                </div>
-
-
-                                                                <button type="submit" class="btn btn-primary btn-lg">Sign in</button>
+                                                                </div><br>
+                                                                <button type="submit" class="btn btn-primary btn-lg">Sign in</button><!--handle menggunakan js-->
                                                             </form>
                                                         </div>
 
@@ -308,177 +300,12 @@
                     </div>
 
                     <!-- middle content -->
-                    <div class="col-12 col-lg-6 col-md-6 center-bar">
-                        <div class="card">
-                            <div class="card-header">
-                                <ul class="nav nav-tabs justify-content-start" role="tablist">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" data-toggle="tab" href="#home" role="tab">
-                                            <i class="now-ui-icons objects_umbrella-13"></i> IB Insta Forex
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" data-toggle="tab" href="#profile" role="tab">
-                                            <i class="now-ui-icons shopping_cart-simple"></i> Services
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" data-toggle="tab" href="#messages" role="tab">
-                                            <i class="now-ui-icons shopping_shop"></i> Features
-                                        </a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                            <hr>
-                            <div class="card-body">
-                                <!-- Tab panes -->
-                                <div class="tab-content text-center">
-                                    <div class="tab-pane active" id="home" role="tabpanel">
-                                        <div class="titleIbinstaforex">
-                                            <h3>Title Goes Here</h3>
-                                        </div>
-                                        <div class="imgIbinstaforex">
-                                            <img src="assets/img/slide/slide-1.jpg" alt="" style="width:100%; border-radius:8px;">
-                                        </div>
-
-                                        <p>I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. So when you get something that has the name Kanye West on it, it’s supposed to be pushing
-                                            the furthest possibilities. I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus.</p>
-
-                                        <hr>
-
-                                        <div class="titleIbinstaforex">
-                                            <h3>Instrumen Trading</h3>
-                                        </div>
-                                        <p>Instrumen terbaik untuk kesuksesan trading online di Forex</p>
-                                        </p>
-                                        <div class="row">
-                                            <div class="col-4 col-md-4 col-sm-4">
-                                                <a type="button" href="https://cabinet.ifxtrend.com/client/id/login" target="_blank" class="btn btn-primary btn-block  my-2" style="border-radius:8px; padding:12px 12px  ;">Bonus 30%</a>
-                                            </div>
-                                            <div class="col-4 col-md-4 col-sm-4">
-                                                <a type="button" href="https://www.ifxtrend.com" target="_blank" class="btn btn-primary btn-block  my-1" style="border-radius:8px; padding:12px 12px  ;">Download MT4</a>
-                                            </div>
-                                            <div class="col-4 col-md-4 col-sm-4">
-                                                <a type="button" href="https://www.ifxtrend.com/forex_calculator.php" target="_blank" class="btn btn-primary btn-block  my-1" style="border-radius:8px; padding:12px 12px  ;">Calculator</a>
-                                            </div>
-                                            <div class="col-4 col-md-4 col-sm-4">
-                                                <a type="button" href="https://www.ifxtrend.com" target="_blank" class="btn btn-primary btn-block  my-1" style="border-radius:8px; padding:12px 12px  ;">Free FA</a>
-                                            </div>
-                                            <div class="col-4 col-md-4 col-sm-4">
-                                                <a type="button" href="https://www.ifxtrend.com" target="_blank" class="btn btn-primary btn-block  my-1" style="border-radius:8px; padding:12px 12px  ;">Free FA</a>
-                                            </div>
-                                            <div class="col-4 col-md-4 col-sm-4">
-                                                <a type="button" href="https://www.ifxtrend.com" target="_blank" class="btn btn-primary btn-block  my-1" style="border-radius:8px; padding:12px 12px  ;">Free FA</a>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="tab-pane" id="profile" role="tabpanel">
-                                        <div class="row">
-                                            <div class="col-md-4">
-
-                                                <div class="imgIbinstaforex">
-                                                    <img src="assets/img/slide/slide-1.jpg" alt="" style="width:100%; border-radius:8px;">
-                                                </div>
-                                                <div class="titleIbinstaforex">
-                                                    <a href="#">
-                                                        <h5>Forex</h5>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="imgIbinstaforex">
-                                                    <img src="assets/img/slide/slide-1.jpg" alt="" style="width:100%; border-radius:8px;">
-                                                </div>
-                                                <div class="titleIbinstaforex">
-                                                    <a href="#">
-                                                        <h5>Option</h5>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="imgIbinstaforex">
-                                                    <img src="assets/img/slide/slide-1.jpg" alt="" style="width:100%; border-radius:8px;">
-                                                </div>
-                                                <div class="titleIbinstaforex">
-                                                    <a href="#">
-                                                        <h5>CryptoCurrency</h5>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="imgIbinstaforex">
-                                                    <img src="assets/img/slide/slide-1.jpg" alt="" style="width:100%; border-radius:8px;">
-                                                </div>
-                                                <div class="titleIbinstaforex">
-                                                    <h5>Commodity</h5>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="imgIbinstaforex">
-                                                    <img src="assets/img/slide/slide-1.jpg" alt="" style="width:100%; border-radius:8px;">
-                                                </div>
-                                                <div class="titleIbinstaforex">
-                                                    <h5>Index</h5>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="imgIbinstaforex">
-                                                    <img src="assets/img/slide/slide-1.jpg" alt="" style="width:100%; border-radius:8px;">
-                                                </div>
-                                                <div class="titleIbinstaforex">
-                                                    <h5>Oil</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <hr>
-                                        <div class="titleIbinstaforex">
-                                            <h3>Instrumen Trading</h3>
-                                        </div>
-                                        <p> I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities,
-                                            to show people, this is the level that things could be at. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. </p>
-                                    </div>
-                                    <div class="tab-pane" id="messages" role="tabpanel">
-                                        <div class="row">
-                                            <div class="col-md-6">
-
-                                                <div class="imgIbinstaforex">
-                                                    <img src="assets/img/slide/slide-1.jpg" alt="" style="width:100%; border-radius:8px;">
-                                                </div>
-                                                <div class="titleIbinstaforex">
-                                                    <a href="#">
-                                                        <h5>Forex</h5>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="imgIbinstaforex">
-                                                    <img src="assets/img/slide/slide-1.jpg" alt="" style="width:100%; border-radius:8px;">
-                                                </div>
-                                                <div class="titleIbinstaforex">
-                                                    <a href="">
-                                                        <h5>Option</h5>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <hr>
-                                        <p>I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. So when you get something that has the name Kanye West on it, it’s supposed to be pushing
-                                            the furthest possibilities. I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus.</p>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+                    @yield("content")
 
                     <div class="col-12 col-lg-3 col-md-3 side">
                         <div class="scroll-area">
                             <div class="right-sidebar" style="background: white;">
+                                @foreach ($supports as $support)
                                 <div class="label">
                                     <h5> <i> Jam Oprasional</i> </h5>
                                 </div>
@@ -486,7 +313,7 @@
                                 <div class="oprasional my-3">
                                     <img src="{{ asset('assets/img/icon/clock.svg') }}" alt="" width="40px" height="40px" style="position: relative;top: -8px;">
                                     <span class="textTime" style="display: inline-block;">
-                                        <b>Senin-Jumat</b> <br> 09.00 - 21.00</span>
+                                        <b>Senin-Jumat</b> <br>{{ $support->operational_time }}</span>
                                 </div>
 
                                 <hr>
@@ -496,8 +323,8 @@
 
                                 <div class="oprasional my-3">
                                     <img src="{{ asset('assets/img/icon/telephone.svg') }}" alt="" width="40px" height="40px" style="position: relative;top: -8px;">
-                                    <span class="textTime" style="display: inline-block;"><b>Call / SMS</b> <br> 08129318248</span>
-                                    <span class="textTime" style="display: inline-block;"><b>Call / SMS</b> <br> 08129318248</span>
+                                    <span class="textTime" style="display: inline-block;"><b>Call / SMS</b> <br> {{ $support->phone }}</span>
+                                    <span class="textTime" style="display: inline-block;"><b>Call / SMS</b> <br> {{ $support->phone }}</span>
                                 </div>
 
                                 <hr>
@@ -507,9 +334,9 @@
 
                                 <div class="oprasional my-3">
                                     <img src="{{ asset('assets/img/icon/wa.svg') }}" alt="" width="40px" height="40px" style="position: relative;top: -8px;">
-                                    <span class="textTime" style="display: inline-block;"><b>Whatsapp</b> <br> 08129318248</span>
+                                    <span class="textTime" style="display: inline-block;"><b>Whatsapp</b> <br> {{ $support->chat }}</span>
                                 </div>
-
+                                @endforeach
                                 <div class="label" style="margin: 16px 0;">
                                     <h5> <i> Latest News</i> </h5>
                                 </div>
@@ -563,24 +390,19 @@
                                                         <li data-target="#myCarousel" data-slide-to="1"></li>
                                                         <li data-target="#myCarousel" data-slide-to="2"></li>
                                                     </ul>
-
+x
                                                     <!-- Wrapper for slides -->
+
                                                     <div class="carousel-inner" role="listbox">
+                                                        @foreach ($testimonials as $testimonial)
                                                         <div class="carousel-item active">
-                                                            <p>This game is so addictive, great time killer, requires quick reaction times. Highly recommend.</p>
-                                                                <h5>Maria Fernandez</h5>
+                                                            <p>{{ $testimonial->description }}</p>
+                                                                <h5>{{ $testimonial->name }}</h5>
                                                         </div>
-
-                                                        <div class="carousel-item">
-                                                            <p>Great. There are many interesting levels for user to play and it's addictive. This game helps me much to relax after a long time studying.</p>
-                                                            <h5>John Smith</h5>
-                                                        </div>
-
-                                                        <div class="carousel-item">
-                                                            <p>Simple but nice game. I have been playing this game many times.</p>
-                                                            <h5>Anna Andersson</h5>
-                                                        </div>
+                                                        @endforeach
                                                     </div>
+
+
 
                                                     <!-- Left and right controls -->
                                                     <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
@@ -655,16 +477,16 @@
 
     <!-- Vendor JS Files -->
 
-    <script src="{{ asset('assets/vendor/jquery/jquery.min.js') }}" type="text/javascript"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-    <script src="{{ asset('assets/vendor/jquery.easing/jquery.easing.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('assets/vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/jquery.easing/jquery.easing.min.js') }}"></script>
     <script src="{{ asset('assets/vendor/php-email-form/validate.js') }}" type="text/javascript"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css" rel="stylesheet" type="text/css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css" rel="stylesheet" type="text/css" />
     <script src="{{ asset('assets/vendor/isotope-layout/isotope.pkgd.min.js') }}" type="text/javascript"></script>
     <script src="{{ asset('assets/vendor/venobox/venobox.min.js') }}" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="text/javascript"></script>
+
 
     <!-- Template Main JS File -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
@@ -672,12 +494,13 @@
     <script>
         $(document).ready(function() {
   $('#tallModal').modal('show');
-  $('#bologna-list a').on('click', function(e) {
+
+});
+
+$('#bologna-list a').on('click', function(e) {
             e.preventDefault()
             $(this).tab('show')
         })
-
-});
 
 
         $(document).ready(function() {
