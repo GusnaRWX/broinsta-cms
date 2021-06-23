@@ -202,68 +202,69 @@
                                                         <div class="card-form">
                                                             <p class="card-text">Broinsta adalah IB (Introduction Broker) atau perwaklian resmi dari Insta Forex Indonesia yang didirikan dengan tujuan untuk membantu. </p>
                                                             <hr>
-                                                            <form>
-
+                                                            <form id="formDeposit" autocomplete="off" enctype="multipart/form-data" action="{{route('deposit.index')}}" method="POST">
+                                                                @csrf
+                                                                @method('POST')
                                                                 <div class="form-group">
                                                                     <label for="inputAddress">Nomor akun Broninsta</label>
-                                                                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                                                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="account_number">
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label for="inputAddress">Jumlah Deposit (Min. USD1)</label>
-                                                                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                                                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="deposit">
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label for="inputAddress2">Jumlah Transfer (Kurs 14,100)</label>
-                                                                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                                                                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" name="transfer">
                                                                 </div>
                                                                 <div class="form-row">
                                                                     <div class="form-group col-md-12">
                                                                         <label for="inputEmail4">Email</label>
-                                                                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                                                                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email" name="email">
                                                                     </div>
                                                                 </div>
 
                                                                 <div class="form-row">
                                                                     <div class="form-group col-md-12">
                                                                         <label for="inputEmail4">Nomor Telepon</label>
-                                                                        <input type="email" class="form-control" id="inputEmail4" placeholder="Nomor telepon anda">
+                                                                        <input type="text" class="form-control" placeholder="Nomor telepon anda" name="phone">
                                                                     </div>
                                                                 </div>
 
                                                                 <div class="form-row">
                                                                     <div class="form-group col-md-12">
                                                                         <label for="inputEmail4">Transfer ke</label>
-                                                                        <select class="custom-select">
-                                                                            <option selected><span>Bank</span> | <span>Nama Bank Akun</span></option>
-                                                                            <option selected><span>Bank Mandiri</span> | <span>Nama Bank Akun ABC</span></option>
-                                                                            <option selected><span>Bank BCA</span> | <span>Nama Bank Akun Bsf</span></option>
-                                                                            <option selected><span>Bank BNI</span> | <span>Nama Bank Akun HGJ</span></option>
+                                                                        <select class="custom-select" name="bank_transfer">
+                                                                            <option selected value="Bank"><span>Bank</span> | <span>Nama Bank Akun</span></option>
+                                                                            <option selected value="Bank Mandiri"><span>Bank Mandiri</span> | <span>Nama Bank Akun ABC</span></option>
+                                                                            <option selected value="Bank BCA"><span>Bank BCA</span> | <span>Nama Bank Akun Bsf</span></option>
+                                                                            <option selected value="Bank BNI"><span>Bank BNI</span> | <span>Nama Bank Akun HGJ</span></option>
                                                                         </select>
                                                                     </div>
                                                                 </div>
                                                                 <div class="form-row">
                                                                     <div class="form-group col-md-4">
                                                                         <label for="inputState">Bank</label>
-                                                                        <select class="custom-select">
-                                                                            <option selected><span>Bank Syariah</span></option>
-                                                                            <option selected><span>Bank Mandiri</span></option>
-                                                                            <option selected><span>Bank BCA</span></option>
-                                                                            <option selected><span>Bank BNI</span></option>
+                                                                        <select class="custom-select"  name="bank">
+                                                                            <option selected value="Bank Syariah"><span>Bank Syariah</span></option>
+                                                                            <option selected value="Bank Mandiri"><span>Bank Mandiri</span></option>
+                                                                            <option selected value="Bank BCA"><span>Bank BCA</span></option>
+                                                                            <option selected value="Bank BNI"><span>Bank BNI</span></option>
                                                                         </select>
                                                                     </div>
                                                                     <div class="form-group col-md-8">
                                                                         <label for="inputCity">Nomor Rekening</label>
-                                                                        <input type="text" class="form-control" id="inputCity">
+                                                                        <input type="text" class="form-control" id="inputCity" name="no_rek">
                                                                     </div>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label for="inputAddress">Pemilik Rekening</label>
-                                                                    <input type="text" class="form-control" id="inputAddress" placeholder="Pemilik Rekening">
+                                                                    <input type="text" class="form-control" id="inputAddress" placeholder="Pemilik Rekening" name="name_rek">
                                                                 </div>
 
                                                                 <div class="form-group">
                                                                     <label for="exampleFormControlFile1">Sisipkan bukti pembayaran</label>
-                                                                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                                                    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="file">
                                                                 </div><br>
                                                                 <button type="submit" class="btn btn-primary btn-lg">Sign in</button><!--handle menggunakan js-->
                                                             </form>
@@ -419,7 +420,7 @@ x
 
                                                     <div class="carousel-inner" role="listbox">
                                                         @foreach ($testimonials as $testimonial)
-                                                        <div class="carousel-item active">
+                                                        <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
                                                             <p>{{ $testimonial->description }}</p>
                                                                 <h5>{{ $testimonial->name }}</h5>
                                                         </div>
@@ -591,6 +592,22 @@ $('#bologna-list a').on('click', function(e) {
                 clearInterval(interval);
             });
         });
+    </script>
+    <script>
+     //   formDeposit.onsubmit = async (e) => {
+     //       e.preventDefault();
+     //       let response = await fetch('/deposit', {
+     //           method: 'POST',
+     //           body: new FormData(formDeposit)
+     //       });
+     //       let result = await response.json();
+     //       if(result.code == 200){
+     //           toastr["success"](result.message, "Deposit");
+     //       }else{
+     //           toastr["danger"](result.message, "Deposit");
+     //       }
+     //   };
+
     </script>
 
 
