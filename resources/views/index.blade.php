@@ -176,13 +176,16 @@
                                             <div class="card-header">
                                                 <ul class="nav nav-tabs card-header-tabs" id="bologna-list" role="tablist">
                                                     <li class="nav-item" style="position: relative; left: -1px;">
-                                                        <a class="nav-link active hover-style" href="#description" role="tab" aria-controls="description" aria-selected="true" style="box-shadow: none!important; font-size: 32px;"><i class="icofont-dollar"></i></a>
+                                                        <a class="nav-link active hover-style" href="#description" role="tab" aria-controls="description" aria-selected="true" style="box-shadow: none!important; font-size: 28px;"><i class="icofont-dollar"></i></a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link hover-style" href="#history" role="tab" aria-controls="history" aria-selected="false" style="box-shadow: none!important; font-size: 32px;"><i class="icofont-database"></i></a>
+                                                        <a class="nav-link hover-style" href="#history" role="tab" aria-controls="history" aria-selected="false" style="box-shadow: none!important; font-size: 28px;"><i class="icofont-database"></i></a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link hover-style" href="#deals" role="tab" aria-controls="deals" aria-selected="false" style="box-shadow: none!important; font-size: 32px;"><i class="icofont-people"></i></a>
+                                                        <a class="nav-link hover-style" href="#deals" role="tab" aria-controls="deals" aria-selected="false" style="box-shadow: none!important; font-size: 28px;"><i class="icofont-people"></i></a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link hover-style" href="#validate" role="tab" aria-controls="validate" aria-selected="false" style="box-shadow: none!important; font-size: 28px;"><i class="icofont-shield"></i></a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -207,15 +210,15 @@
                                                                 @method('POST')
                                                                 <div class="form-group">
                                                                     <label for="inputAddress">Nomor akun Broninsta</label>
-                                                                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="account_number">
+                                                                    <input type="text" class="form-control" id="inputAddress" placeholder="Nomor akun instaforex" name="account_number">
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label for="inputAddress">Jumlah Deposit (Min. USD1)</label>
-                                                                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="deposit">
+                                                                    <input type="text" class="form-control" id="inputAddress" placeholder="Jumlah yang akan di deposit" name="deposit">
                                                                 </div>
                                                                 <div class="form-group">
-                                                                    <label for="inputAddress2">Jumlah Transfer (Kurs 14,100)</label>
-                                                                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" name="transfer">
+                                                                    <label for="inputAddress2">Jumlah Transfer (Kurs {{ $kurse->deposit }})</label>
+                                                                    <input type="text" class="form-control" id="inputAddress2" placeholder="Jumlah transfer" name="transfer">
                                                                 </div>
                                                                 <div class="form-row">
                                                                     <div class="form-group col-md-12">
@@ -282,11 +285,11 @@
                                                             <form >
                                                                 <div class="form-group">
                                                                     <label for="inputAddress">Nomor akun Broninsta</label>
-                                                                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="no_akun">
+                                                                    <input type="text" class="form-control" id="inputAddress" placeholder="Nomor Akun anda">
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label for="inputAddress">Password</label>
-                                                                    <input type="password" class="form-control" id="inputAddress" placeholder="your password here" name="password">
+                                                                    <input type="password" class="form-control" id="inputAddress" placeholder="password">
                                                                 </div>
 
                                                                 <button type="submit" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#formWithdraw" id="submitWitdraw">Submit</button>
@@ -301,16 +304,38 @@
                                                         <div class="card-form">
                                                             <p class="card-text">Broinsta adalah IB (Introduction Broker) atau perwaklian resmi dari Insta Forex Indonesia yang didirikan dengan tujuan untuk membantu. </p>
                                                             <hr>
-                                                            <form action="{{route('deposit.account')}}" enctype="multipart/form-data" method="POST" autocomplete="off">
-                                                                @method('POST')
-                                                                @csrf
+                                                            <form>
                                                                 <div class="form-group">
-                                                                    <label for="no_akun">Nomor akun Broninsta</label>
-                                                                    <input type="text" class="form-control" id="no_akun" placeholder="1234 Main St" name="no_akun">
+                                                                    <label for="inputAddress">Nomor akun Broninsta</label>
+                                                                    <input type="text" class="form-control" id="inputAddress" placeholder="Nomor Akun anda">
                                                                 </div>
                                                                 <div class="form-group">
-                                                                    <label for="password">Password</label>
-                                                                    <input type="password" class="form-control" id="password" placeholder="your password here" name="password">
+                                                                    <label for="inputAddress">Password</label>
+                                                                    <input type="password" class="form-control" id="inputAddress" placeholder=" password ">
+                                                                </div>
+
+                                                                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="tab-pane" id="validate" role="tabpanel" aria-labelledby="deals-tab">
+                                                        <div class="deposit-title">
+                                                            <h4>Validasi</h4>
+                                                        </div>
+                                                        <div class="card-form">
+                                                            <p class="card-text">Broinsta adalah IB (Introduction Broker) atau perwaklian resmi dari Insta Forex Indonesia yang didirikan dengan tujuan untuk membantu. </p>
+                                                            <hr>
+                                                            <form action="{{ route('deposit.account') }}" enctype="multipart/form-data" method="POST" autocomplete="off">
+                                                                @csrf
+                                                                @method('POST')
+                                                                <div class="form-group">
+                                                                    <label for="inputAddress">Nomor akun Broninsta</label>
+                                                                    <input type="text" class="form-control" id="inputAddress" placeholder="Nomor Akun anda" name="no_akun">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="inputAddress">Password</label>
+                                                                    <input type="password" class="form-control" id="inputAddress" placeholder=" password " name="password">
                                                                 </div>
 
                                                                 <button type="submit" class="btn btn-primary btn-lg">Submit</button>
@@ -470,7 +495,7 @@ x
         </section>
         <!-- End Featured Services Section -->
 
-        <a href="https://api.whatsapp.com/send?phone=6281297818078." class="float" target="_blank">
+        <a href="https://api.whatsapp.com/send?phone={{ $support->chat }}." class="float" target="_blank">
             <i class="icofont-brand-whatsapp my-float"></i>
         </a>
     </main>

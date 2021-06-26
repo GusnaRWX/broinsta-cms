@@ -40,6 +40,42 @@
 
                     <hr>
 
+                    <div class="row">
+                        <div class="col-md-4">
+
+                            <div class="imgIbinstaforex">
+                                <img src="assets/img/slide/slide-1.jpg" alt="" style="width:100%; border-radius:8px;">
+                            </div>
+                            <div class="titleIbinstaforex">
+                                <a href="#">
+                                    <h5>Forex</h5>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="imgIbinstaforex">
+                                <img src="assets/img/slide/slide-1.jpg" alt="" style="width:100%; border-radius:8px;">
+                            </div>
+                            <div class="titleIbinstaforex">
+                                <a href="#">
+                                    <h5>Option</h5>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="imgIbinstaforex">
+                                <img src="assets/img/slide/slide-1.jpg" alt="" style="width:100%; border-radius:8px;">
+                            </div>
+                            <div class="titleIbinstaforex">
+                                <a href="#">
+                                    <h5>CryptoCurrency</h5>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+
                     <div class="titleIbinstaforex">
                         <h3>Instrumen Trading</h3>
                     </div>
@@ -50,7 +86,7 @@
                             <a type="button" href="https://cabinet.ifxtrend.com/client/id/login" target="_blank" class="btn btn-primary btn-block  my-2" style="border-radius:8px; padding:12px 12px  ;">Bonus 30%</a>
                         </div>
                         <div class="col-4 col-md-4 col-sm-4">
-                            <a type="button" href="https://www.ifxtrend.com" target="_blank" class="btn btn-primary btn-block  my-1" style="border-radius:8px; padding:12px 12px  ;">Download MT4</a>
+                            <a type="button" href="https://www.ifxtrend.com/trading_platform" target="_blank" class="btn btn-primary btn-block  my-1" style="border-radius:8px; padding:12px 12px  ;">Download MT4</a>
                         </div>
                         <div class="col-4 col-md-4 col-sm-4">
                             <a type="button" href="https://www.ifxtrend.com/forex_calculator.php" target="_blank" class="btn btn-primary btn-block  my-1" style="border-radius:8px; padding:12px 12px  ;">Calculator</a>
@@ -59,10 +95,10 @@
                             <a type="button" href="https://www.ifxtrend.com" target="_blank" class="btn btn-primary btn-block  my-1" style="border-radius:8px; padding:12px 12px  ;">Free FA</a>
                         </div>
                         <div class="col-4 col-md-4 col-sm-4">
-                            <a type="button" href="https://www.ifxtrend.com" target="_blank" class="btn btn-primary btn-block  my-1" style="border-radius:8px; padding:12px 12px  ;">Free FA</a>
+                            <a type="button" href="https://play.google.com/store/apps/details?id=com.proinsta   " target="_blank" class="btn btn-primary btn-block  my-1" style="border-radius:8px; padding:12px 12px  ;">Aplikasi Gadget</a>
                         </div>
                         <div class="col-4 col-md-4 col-sm-4">
-                            <a type="button" href="https://www.ifxtrend.com" target="_blank" class="btn btn-primary btn-block  my-1" style="border-radius:8px; padding:12px 12px  ;">Free FA</a>
+                            <a type="button" href="https://www.ifxtrend.com" target="_blank" class="btn btn-primary btn-block  my-1" style="border-radius:8px; padding:12px 12px  ;">Deposit Reward</a>
                         </div>
                     </div>
 
