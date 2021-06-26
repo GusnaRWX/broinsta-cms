@@ -39,4 +39,37 @@ class IndexController extends Controller
         return redirect()->view('content.konten');
 
     }
+
+    public function getAccount(Request $request)
+    {
+        $login = $request->get('no_akun');
+        $password = $request->get('password');
+        $data = array("Login" => $login, "Password" => $password);
+        $data_string = json_encode($data);
+
+        $apiAuthenticationMethod = 'api/Authentication/RequestPartnerApiToken';
+        $ch = curl_init('https://client-api.instaforex.com/'.$apiAuthenticationMethod);
+
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, false);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', 'Content-Length: ' . strlen($data_string)));
+
+        $token = curl_exec($ch);
+        curl_close($ch);
+        dd($token);
+
+        $apiMethodUrl = 'client/GetReferralAccounts/'; //Must be Changed
+        $parameters = $login;
+        $ch = curl_init('https://client-api.instaforex.com/'.$apiMethodUrl.$parameters); #possibly Must be Changed part with [$Login]. Depends on the method param
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
+        //curl_setopt($ch, CURLOPT_RETURNTRANSFER, false);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array('passkey: '.$token));
+        $result = curl_exec($ch);
+        dd($result);
+        curl_close($ch);
+        echo $result;
+        //No acc : 50751202
+        //Paswd : nosade12
+    }
 }

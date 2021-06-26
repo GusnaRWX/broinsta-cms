@@ -10,7 +10,7 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    
+
     <link rel="icon" href="{{ asset('assets/img/favicon.png') }}" type="image/x-icon"/>
 
     <!-- Google Fonts -->
@@ -279,14 +279,14 @@
                                                         <div class="card-form">
                                                             <p class="card-text">Broinsta adalah IB (Introduction Broker) atau perwaklian resmi dari Insta Forex Indonesia yang didirikan dengan tujuan untuk membantu. </p>
                                                             <hr>
-                                                            <form action="">
+                                                            <form >
                                                                 <div class="form-group">
                                                                     <label for="inputAddress">Nomor akun Broninsta</label>
-                                                                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                                                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="no_akun">
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label for="inputAddress">Password</label>
-                                                                    <input type="password" class="form-control" id="inputAddress" placeholder="your password here">
+                                                                    <input type="password" class="form-control" id="inputAddress" placeholder="your password here" name="password">
                                                                 </div>
 
                                                                 <button type="submit" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#formWithdraw" id="submitWitdraw">Submit</button>
@@ -301,14 +301,16 @@
                                                         <div class="card-form">
                                                             <p class="card-text">Broinsta adalah IB (Introduction Broker) atau perwaklian resmi dari Insta Forex Indonesia yang didirikan dengan tujuan untuk membantu. </p>
                                                             <hr>
-                                                            <form action="">
+                                                            <form action="{{route('deposit.account')}}" enctype="multipart/form-data" method="POST" autocomplete="off">
+                                                                @method('POST')
+                                                                @csrf
                                                                 <div class="form-group">
-                                                                    <label for="inputAddress">Nomor akun Broninsta</label>
-                                                                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                                                    <label for="no_akun">Nomor akun Broninsta</label>
+                                                                    <input type="text" class="form-control" id="no_akun" placeholder="1234 Main St" name="no_akun">
                                                                 </div>
                                                                 <div class="form-group">
-                                                                    <label for="inputAddress">Password</label>
-                                                                    <input type="password" class="form-control" id="inputAddress" placeholder="your password here">
+                                                                    <label for="password">Password</label>
+                                                                    <input type="password" class="form-control" id="password" placeholder="your password here" name="password">
                                                                 </div>
 
                                                                 <button type="submit" class="btn btn-primary btn-lg">Submit</button>
@@ -474,7 +476,7 @@ x
     </main>
     <!-- End #main -->
 
-    
+
 
     <div id="tallModal" class="modal modal-wide fade">
         <div class="modal-dialog">
@@ -570,7 +572,7 @@ x
 
 
 $('#submitWitdraw').on('click', function(e) {
-            e.preventDefault() 
+            e.preventDefault()
         })
 
 $('#bologna-list a').on('click', function(e) {
