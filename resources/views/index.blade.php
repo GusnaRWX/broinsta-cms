@@ -347,7 +347,7 @@
                                                                     <input type="password" class="form-control" id="inputAddress" placeholder=" password " name="password">
                                                                 </div>
 
-                                                                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                                                                <a href="konten-success.blade.php" type="submit" class="btn btn-primary btn-lg">Submit</a>
                                                             </form>
                                                         </div>
                                                     </div>
