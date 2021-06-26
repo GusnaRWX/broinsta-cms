@@ -326,7 +326,7 @@
                                                         <div class="card-form">
                                                             <p class="card-text">Broinsta adalah IB (Introduction Broker) atau perwaklian resmi dari Insta Forex Indonesia yang didirikan dengan tujuan untuk membantu. </p>
                                                             <hr>
-                                                            <form action="{{ route('deposit.account') }}" enctype="multipart/form-data" method="POST" autocomplete="off">
+                                                            <form action="{{ route('deposit.validasi') }}" enctype="multipart/form-data" method="POST" autocomplete="off">
                                                                 @csrf
                                                                 @method('POST')
                                                                 <div class="form-group">

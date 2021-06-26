@@ -40,7 +40,7 @@ class IndexController extends Controller
 
     }
 
-    public function getAccount(Request $request)
+    public function getValidasi(Request $request)
     {
         $login = $request->get('no_akun');
         $password = $request->get('password');
@@ -48,7 +48,7 @@ class IndexController extends Controller
         $data_string = json_encode($data);
 
         $apiAuthenticationMethod = 'api/Authentication/RequestPartnerApiToken';
-        $ch = curl_init('https://client-api.instaforex.com/'.$apiAuthenticationMethod);
+        $ch = curl_init('http://client-api.instaforex.com/'.$apiAuthenticationMethod);
 
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
         curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
@@ -57,18 +57,21 @@ class IndexController extends Controller
 
         $token = curl_exec($ch);
         curl_close($ch);
-        dd($token);
 
-        $apiMethodUrl = 'client/GetReferralAccounts/'; //Must be Changed
+        $apiMethodUrl = 'partner/CheckReferral/50751202/'; //Must be Changed
         $parameters = $login;
-        $ch = curl_init('https://client-api.instaforex.com/'.$apiMethodUrl.$parameters); #possibly Must be Changed part with [$Login]. Depends on the method param
+        $ch = curl_init('http://client-api.instaforex.com/'.$apiMethodUrl.$parameters); #possibly Must be Changed part with [$Login]. Depends on the method param
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
         //curl_setopt($ch, CURLOPT_RETURNTRANSFER, false);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('passkey: '.$token));
         $result = curl_exec($ch);
-        dd($result);
         curl_close($ch);
-        echo $result;
+        if($result){
+            return view('content.konten-success');
+        }else{
+            return redirect()->route('deposit.index')->with('errors', 'yah ! akun anda tidak ada di partner kami');
+        }
+        //echo $result;
         //No acc : 50751202
         //Paswd : nosade12
     }
