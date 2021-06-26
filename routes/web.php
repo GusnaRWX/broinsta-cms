@@ -15,12 +15,10 @@ use App\Http\Controllers\IndexController;
 */
 
 Route::group(['prefix' => '/'], function () {
-    Route::get('/', 'App\Http\Controllers\IndexController@getIndex');
+    Route::get('/', 'App\Http\Controllers\IndexController@getIndex')-name('broinsta.home');
     Route::post('/deposit', 'App\Http\Controllers\IndexController@store')->name('deposit.index');
     Route::post('/validasi', 'App\Http\Controllers\IndexController@getValidasi')->name('deposit.validasi');
 });
-
-
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });

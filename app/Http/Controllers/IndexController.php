@@ -69,7 +69,7 @@ class IndexController extends Controller
         if($result){
             return view('content.konten-success');
         }else{
-            return redirect()->route('deposit.index')->with('errors', 'yah ! akun anda tidak ada di partner kami');
+            return redirect()->route('broinsta.home')->with('errors', 'yah ! akun anda tidak ada di partner kami');
         }
         //echo $result;
         //No acc : 50751202

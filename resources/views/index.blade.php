@@ -171,6 +171,15 @@
                                     <h5> <i> Trade Zone</i> </h5>
                                 </div>
                                 <div class="row">
+                                    @if (session('errors'))
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="alert alert-warning">
+                                                {{session('errors')}}
+                                        </div>
+                                    </div>
+                                </div>
+                                    @endif
                                     <div class="col-12 -col-sm-12">
                                         <div class="card">
                                             <div class="card-header">
