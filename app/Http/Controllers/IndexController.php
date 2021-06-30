@@ -42,6 +42,10 @@ class IndexController extends Controller
 
     public function getValidasi(Request $request)
     {
+        $kurses = Kurse::all();
+        $supports = Support::all();
+        $testimonials = Testimonial::all();
+
         $login = $request->get('no_akun');
         $password = $request->get('password');
         $data = array("Login" => $login, "Password" => $password);
@@ -52,7 +56,7 @@ class IndexController extends Controller
 
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
         curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, false);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', 'Content-Length: ' . strlen($data_string)));
 
         $token = curl_exec($ch);
@@ -62,17 +66,51 @@ class IndexController extends Controller
         $parameters = $login;
         $ch = curl_init('http://client-api.instaforex.com/'.$apiMethodUrl.$parameters); #possibly Must be Changed part with [$Login]. Depends on the method param
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
-        //curl_setopt($ch, CURLOPT_RETURNTRANSFER, false);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('passkey: '.$token));
         $result = curl_exec($ch);
-        curl_close($ch);
-        if($result){
-            return view('content.konten-success');
+        if($result == "true"){
+            return view('content.konten-success', ['kurses' => $kurses, 'supports' => $supports, 'testimonials' => $testimonials]);
         }else{
-            return redirect()->route('broinsta.home')->with('errors', 'yah ! akun anda tidak ada di partner kami');
+            return redirect()->back()->with('errors', 'yah ! akun anda tidak ada di partner kami');
         }
+        curl_close($ch);
+        //$new_result = json_decode($result, true);
+        //echo $result;
         //echo $result;
         //No acc : 50751202
         //Paswd : nosade12
+    }
+
+    public function getAccount(Request $request){
+        $kurses = Kurse::all();
+        $supports = Support::all();
+        $testimonials = Testimonial::all();
+
+        $login = $request->get('no_akun');
+        $password = $request->get('password');
+        $data = array("Login" => $login, "Password" => $password);
+        $data_string = json_encode($data);
+
+        $apiAuthenticationMethod = 'api/Authentication/RequestPartnerApiToken';
+        $ch = curl_init('http://client-api.instaforex.com/'.$apiAuthenticationMethod);
+
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', 'Content-Length: ' . strlen($data_string)));
+
+        $token = curl_exec($ch);
+        curl_close($ch);
+
+        $apiMethodUrl = 'partner/CheckReferral/50751202/'; //Must be Changed
+        $parameters = $login;
+        $ch = curl_init('http://client-api.instaforex.com/'.$apiMethodUrl.$parameters); #possibly Must be Changed part with [$Login]. Depends on the method param
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array('passkey: '.$token));
+        $result = curl_exec($ch);
+        dd($result);
+        curl_close($ch);
     }
 }

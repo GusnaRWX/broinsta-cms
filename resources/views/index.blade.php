@@ -313,14 +313,16 @@
                                                         <div class="card-form">
                                                             <p class="card-text">Broinsta adalah IB (Introduction Broker) atau perwaklian resmi dari Insta Forex Indonesia yang didirikan dengan tujuan untuk membantu. </p>
                                                             <hr>
-                                                            <form>
+                                                            <form action="{{ route('deposit.validasi') }}" enctype="multipart/form-data" method="POST" autocomplete="off">
+                                                                @csrf
+                                                                @method('POST')
                                                                 <div class="form-group">
                                                                     <label for="inputAddress">Nomor akun Broninsta</label>
-                                                                    <input type="text" class="form-control" id="inputAddress" placeholder="Nomor Akun anda">
+                                                                    <input type="text" class="form-control" id="inputAddress" placeholder="Nomor Akun anda" name="no_akun">
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label for="inputAddress">Password</label>
-                                                                    <input type="password" class="form-control" id="inputAddress" placeholder=" password ">
+                                                                    <input type="password" class="form-control" id="inputAddress" placeholder=" password " name="password">
                                                                 </div>
 
                                                                 <button type="submit" class="btn btn-primary btn-lg">Submit</button>
@@ -347,7 +349,7 @@
                                                                     <input type="password" class="form-control" id="inputAddress" placeholder=" password " name="password">
                                                                 </div>
 
-                                                                <a href="konten-success.blade.php" type="submit" class="btn btn-primary btn-lg">Submit</a>
+                                                                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
                                                             </form>
                                                         </div>
                                                     </div>
