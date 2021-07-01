@@ -1,0 +1,158 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+use TCG\Voyager\Models\DataRow;
+use TCG\Voyager\Models\DataType;
+use TCG\Voyager\Models\Permission;
+
+class SupportAdminSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        $dataType = $this->dataType('slug', 'supports');
+        if (!$dataType->exists) {
+            $dataType->fill([
+                'name'                  => 'supports',
+                'display_name_singular' => 'support',
+                'display_name_plural'   => 'supports',
+                'icon'                  => 'voyager-alarm-clock',
+                'model_name'            => 'App\Models\Support',
+                'policy_name'           => '',
+                'controller'            => '',
+                'generate_permissions'  => 1,
+                'description'           => '',
+            ])->save();
+        }
+        //Data Rows
+        $postDataType = DataType::where('slug', 'supports')->firstOrFail();
+        $dataRow = $this->dataRow($postDataType, 'id');
+        if (!$dataRow->exists) {
+            $dataRow->fill([
+                'type' => 'number',
+                'display_name' => __('voyager::seeders.data_rows.id'),
+                'required' => 1,
+                'browse' => 0,
+                'read' => 0,
+                'edit' => 0,
+                'add' => 0,
+                'delete' => 0,
+                'order' => 0,
+            ])->save();
+        }
+
+        $dataRow = $this->dataRow($postDataType, 'operational_time');
+        if (!$dataRow->exists) {
+            $dataRow->fill([
+                'type' => 'text',
+                'display_name' => 'Operational Time',
+                'required' => 1,
+                'browse' => 1,
+                'read' => 0,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'order' => 1,
+            ])->save();
+        }
+
+        $dataRow = $this->dataRow($postDataType, 'phone');
+        if (!$dataRow->exists) {
+            $dataRow->fill([
+                'type' => 'text',
+                'display_name' => 'Phone',
+                'required' => 1,
+                'browse' => 1,
+                'read' => 0,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'order' => 2,
+            ])->save();
+        }
+
+        $dataRow = $this->dataRow($postDataType, 'chat');
+        if (!$dataRow->exists) {
+            $dataRow->fill([
+                'type' => 'text',
+                'display_name' => 'Chat',
+                'required' => 1,
+                'browse' => 1,
+                'read' => 0,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'order' => 3,
+            ])->save();
+        }
+
+        $dataRow = $this->dataRow($postDataType, 'created_at');
+        if (!$dataRow->exists) {
+            $dataRow->fill([
+                'type' => 'text',
+                'display_name' => 'Created At',
+                'required' => 1,
+                'browse' => 1,
+                'read' => 0,
+                'edit' => 0,
+                'add' => 0,
+                'delete' => 0,
+                'order' => 4,
+            ])->save();
+        }
+
+        $dataRow = $this->dataRow($postDataType, 'updated_at');
+        if (!$dataRow->exists) {
+            $dataRow->fill([
+                'type' => 'text',
+                'display_name' => 'Updated At',
+                'required' => 1,
+                'browse' => 0,
+                'read' => 0,
+                'edit' => 0,
+                'add' => 0,
+                'delete' => 0,
+                'order' => 5,
+            ])->save();
+        }
+
+        Permission::generateFor('supports');
+    }
+
+     /**
+     * [dataRow description].
+     *
+     * @param [type] $type  [description]
+     * @param [type] $field [description]
+     *
+     * @return [type] [description]
+     */
+
+    protected function dataRow($type, $field)
+    {
+        return DataRow::firstOrNew([
+            'data_type_id' => $type->id,
+            'field'        => $field,
+        ]);
+    }
+
+     /**
+     * [dataType description].
+     *
+     * @param [type] $field [description]
+     * @param [type] $for   [description]
+     *
+     * @return [type] [description]
+     */
+
+    protected function dataType($field, $for)
+    {
+        return DataType::firstOrNew([$field => $for]);
+    }
+}

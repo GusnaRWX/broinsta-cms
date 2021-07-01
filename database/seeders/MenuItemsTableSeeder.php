@@ -45,7 +45,7 @@ class MenuItemsTableSeeder extends Seeder
                 'icon_class' => 'voyager-images',
                 'color'      => null,
                 'parent_id'  => null,
-                'order'      => 5,
+                'order'      => 2,
             ])->save();
         }
 
@@ -77,9 +77,44 @@ class MenuItemsTableSeeder extends Seeder
                 'icon_class' => 'voyager-lock',
                 'color'      => null,
                 'parent_id'  => null,
-                'order'      => 2,
+                'order'      => 4,
             ])->save();
         }
+        $itemMenu = MenuItem::firstOrCreate([
+            'menu_id' => $menu->id,
+            'title' => 'Support',
+            'route' => 'voyager.supports.index',
+            'icon_class' => 'voyager-alarm-clock',
+            'order' => 5,
+            'url' => '',
+        ]);
+
+        $itemMenu = MenuItem::firstOrCreate([
+            'menu_id' => $menu->id,
+            'title' => 'Testimonials',
+            'route' => 'voyager.testimonials.index',
+            'icon_class' => 'voyager-chat',
+            'order' => 6,
+            'url' => '',
+        ]);
+
+        $itemMenu = MenuItem::firstOrCreate([
+            'menu_id' => $menu->id,
+            'title' => 'Kurse',
+            'route' => 'voyager.kurses.index',
+            'icon_class' => 'voyager-dollar',
+            'order' => 7,
+            'url' => '',
+        ]);
+
+        $itemMenu = MenuItem::firstOrCreate([
+            'menu_id' => $menu->id,
+            'title' => 'Deposits',
+            'route' => 'voyager.deposits.index',
+            'icon_class' => 'voyager-wallet',
+            'order' => 8,
+            'url' => '',
+        ]);
 
         $toolsMenuItem = MenuItem::firstOrNew([
             'menu_id' => $menu->id,

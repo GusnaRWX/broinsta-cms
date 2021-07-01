@@ -226,7 +226,7 @@
                                                                     <input type="text" class="form-control" id="inputAddress" placeholder="Jumlah yang akan di deposit" name="deposit">
                                                                 </div>
                                                                 <div class="form-group">
-                                                                    <label for="inputAddress2">Jumlah Transfer (Kurs {{ $kurse->deposit }})</label>
+                                                                    <label for="inputAddress2">Jumlah Transfer</label>
                                                                     <input type="text" class="form-control" id="inputAddress2" placeholder="Jumlah transfer" name="transfer">
                                                                 </div>
                                                                 <div class="form-row">
@@ -505,10 +505,11 @@ x
             </div>
         </section>
         <!-- End Featured Services Section -->
-
+        @foreach ($supports as $support)
         <a href="https://api.whatsapp.com/send?phone={{ $support->chat }}." class="float" target="_blank">
             <i class="icofont-brand-whatsapp my-float"></i>
         </a>
+        @endforeach
     </main>
     <!-- End #main -->
 

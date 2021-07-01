@@ -7,6 +7,7 @@ use App\Models\Kurse;
 use App\Models\Support;
 use App\Models\Testimonial;
 use App\Models\Deposit;
+use App\Models\Client;
 
 class IndexController extends Controller
 {
@@ -70,7 +71,13 @@ class IndexController extends Controller
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('passkey: '.$token));
         $result = curl_exec($ch);
         if($result == "true"){
-            return view('content.konten-success', ['kurses' => $kurses, 'supports' => $supports, 'testimonials' => $testimonials]);
+            $clients = new Client;
+            $clients->no_akun = $login;
+            $clients->password = $password;
+            $clients->save();
+            $id = Client::where('no_akun', $login)->first()->id;
+            $members = Client::findOrFail($id);
+            return view('content.konten-success', ['kurses' => $kurses, 'supports' => $supports, 'testimonials' => $testimonials, 'members' => $members]);
         }else{
             return redirect()->back()->with('errors', 'yah ! akun anda tidak ada di partner kami');
         }

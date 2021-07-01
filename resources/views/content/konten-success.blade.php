@@ -6,6 +6,16 @@
 
         <div class="card-body">
 
+                @if (session('status'))
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="alert alert-success">
+                            {{session('status')}}
+                    </div>
+                </div>
+            </div>
+            @endif
+
             <div class="imgIbinstaforex">
                 <img src="{{asset('assets/img/gambar1.png')}}" alt="" style="width:100%; border-radius:8px;">
             </div>
@@ -13,15 +23,16 @@
             <div class="card-form">
                                     <h4 class="card-text">LengKapi Data dibawah untuk mevalidasi akun anda di BROINSTA. </h4>
                                     <hr>
-                                    <form id="formDeposit" autocomplete="off" enctype="multipart/form-data" action="{{route('deposit.index')}}" method="POST">
-                                        @csrf @method('POST')
+                                    <form id="formDeposit" autocomplete="off" enctype="multipart/form-data" action="{{route('members.update', [$members->id])}}" method="POST">
+                                        @csrf
+                                        @method('PUT')
                                         <div class="form-group">
                                             <label for="inputAddress">Nomor akun Broninsta</label>
-                                            <input type="text" class="form-control" id="inputAddress" placeholder="Nomor akun instaforex" name="account_number">
+                                            <input type="text" class="form-control" id="inputAddress" name="no_akun" value="{{$members->no_akun}}" disabled>
                                         </div>
                                         <div class="form-group">
                                             <label for="inputAddress">Password</label>
-                                            <input type="password" class="form-control" id="inputAddress" placeholder="Nomor akun instaforex" name="password">
+                                            <input type="password" class="form-control" id="inputAddress" name="password" value="{{$members->password}}" disabled>
                                         </div>
 
                                         <div class="form-row">
@@ -64,16 +75,16 @@
                                         <div class="form-row">
                                             <div class="form-group col-md-4">
                                                 <label for="inputState">Rebate Kirim Ke</label>
-                                                <select class="custom-select" name="withdraw">
+                                                <select class="custom-select" name="rebate">
                                                     <option selected value="Bank Syariah"><span>Akun insta</span></option>
                                                     <option selected value="Bank Mandiri"><span>Bank Mandiri</span></option>
                                                     <option selected value="Bank BCA"><span>Bank BCA</span></option>
-                                                    
+
                                                 </select>
                                             </div>
                                             <div class="form-group col-md-8">
                                                 <label for="inputCity">Nomor Rekening</label>
-                                                <input type="text" class="form-control" id="inputCity" name="no_rek">
+                                                <input type="text" class="form-control" id="inputCity" name="rebate_rek">
                                             </div>
                                         </div>
 
@@ -87,7 +98,7 @@
 
                                         <div class="form-group">
                                             <label for="inputAddress">KTP penerima Rebate</label>
-                                            <input type="text" class="form-control" id="inputAddress" placeholder="KTP Penerima" name="_ktp_penerima">
+                                            <input type="text" class="form-control" id="inputAddress" placeholder="KTP Penerima" name="ktp_penerima">
                                         </div>
 
                                         <br>
@@ -95,12 +106,11 @@
                                         <!--handle menggunakan js-->
                                     </form>
                                 </div>
-
-
         </div>
     </div>
 
 </div>
+
 
 
 @endsection
