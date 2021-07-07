@@ -1,23 +1,28 @@
 @extends('index')
 
 @section('content')
-<div class="col-12 col-lg-4 col-md-4 offset-md-1 align-self-center center-bar text-center justify-content-center d-flex">
+  <!-- middle content -->
+
+  <div class="col-12 col-lg-6 col-md-6 align-self-center center-bar  justify-content-center d-flex pt-3">
+
     <div class="card">
         <!-- ======= Breadcrumbs ======= -->
         <div id="breadcrumbs" class="breadcrumbs">
             <div class="container">
 
                 <div class="d-flex justify-content-between align-items-center">
-                    <h2>Check Status Afiliasi</h2>
+                    <h2>Validasi akun</h2>
                     <ol>
                         <li><a href="index.html">Home</a></li>
-                        <li>Check Status Afiliasi</li>
+                        <li>Validasi Akun</li>
                     </ol>
                 </div>
 
             </div>
         </div>
         <!-- End Breadcrumbs -->
+
+
 
         <div class="card-body">
 
@@ -30,22 +35,67 @@
                     </div>
 
                     <div class="text-left">
-                        <p>Berikut merupakan menu untuk mengecek status afiliasi serta status account Anda.</p>
+                        <ul>
+                            <li>
+                                <p>
+                                    Validasi akun dilakukan bertujuan untuk melakukan pencatatan akun (memastikan terdaftar di affiliasi kami), mendapatkan akses ke check akun agar klien dapat mengecek semua history transaksi yang pernah dilakukan di broinsta.com, konfirmasi tujuan pengiriman
+                                    rebates, serta pencatatan data transfer untuk withdrawal.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Setiap akun baru disarankan untuk melakukan pengisian validasi akun agar data akun tercatat di kami dan memudahkan proses pengiriman rebate, deposit dan withdrawal.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Tujuan pengiriman rebate dapat di konfirmasikan melalui form validasi yang ada di sebelah kiri website kami, pada area Trader Zone. Pengisian form validasi akun hanya dapat dilakukan pada hari kerja, senin-jumat.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Pastikan akun klien telah terdaftar di InstaForex di bawah referal kami dengan affiliate code = <span><h5>
+                                        <b>MXSDU</b> 
+                                    </h5></span>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Pengiriman rebates kami proses sesuai dengan data yang kami terima (valid) dari hasil pengisian form validasi akun oleh klien. Oleh karena itu, kami menghimbau agar phone password jangan sampai bocor ke orang lain, karena dapat digunakan untuk melakukan
+                                    validasi akun.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Jika terjadi kebocoran password oleh kelalaian klien, yang mengakibatkan kerugian pada klien karena disalahgunakan oleh pihak lain baik itu untuk kepentingan validasi akun, withdrawal dan lain sebagainya yang membutuhkan phone password, maka hal tersebut
+                                    sepenuhnya tanggung jawab klien dan bukan kesalahan dari broinsta.com
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Harap diperhatikan, dalam ketentuan pembagian rebates, perhitungan seluruhnya berdasar pada hasil dari trading yang telah dilakukan. Rebates yang kami bagikan adalah sesuai dengan rebates yang kami terima dari <b>InstaForex </b>                                                        untuk masing-masing akun, lalu kami konversi dengan nilai 1.5 pips dan bonus tambahan. *untuk informasi lebih lanjut, silakan hubungi customer service kami.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Harap trading sesuai dengan rules yang ada, dan tidak melanggar ketentuan. Apabila ada akun yang melakukan trading dengan melanggar ketentuan, yang mengakibatkan rebates dibatalkan oleh InstaForex, maka kami juga membatalkan rebates untuk akun tersebut
+                                    yang jumlahnya
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Untuk rebates yang jika dirupiahkan bernilai kurang dari Rp 10.000,- dengan tujuan transfer ke rekening bank, maka proifxib.com berhak untuk mengirim rebates untuk akun tersebut ke akun yang bersangkutan, bukan ke rekening bank.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Untuk melakukan validasi akun, silahkan klik tombol Validasi pada menu Trader Zone, seperti yang sudah di tandai pada gambar di bawah ini. Kemudian masukkan nomor akun serta phone password. Jika sudah, silahkan tunggu team validasi kami untuk memproses
+                                    validasi anda. Apabila data yang diinput sudah benar, maka anda dapat masuk ke Account yang juga ada di menu Trader Zone.
+                                </p>
+                            </li>
+
+                        </ul>
                     </div>
-
-                    <form action="" class="text-left">
-                        <div class="form-group">
-                            <label for="inputAddress">Nomor akun Broninsta</label>
-                            <input type="text" class="form-control col-6" id="inputAddress" placeholder="1234 Main St">
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" class="form-control col-6" id="inputAddress" placeholder="password">
-                        </div>
-
-                        <button type="submit" class="btn btn-primary btn-lg">Check akun</button>
-
-                    </form>
 
                     <hr>
 
@@ -179,6 +229,5 @@
     </div>
 
 </div>
-
 
 @endsection

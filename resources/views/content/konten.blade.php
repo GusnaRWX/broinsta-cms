@@ -29,7 +29,7 @@
             <div class="tab-content text-center">
                 <div class="tab-pane active" id="home" role="tabpanel">
                     <div class="titleIbinstaforex">
-                        <h3>Title Goes Here</h3>
+                        <h3>BroInsta</h3>
                     </div>
                     <div class="imgIbinstaforex">
                         <img src="assets/img/slide/slide-1.jpg" alt="" style="width:100%; border-radius:8px;">
@@ -39,7 +39,7 @@
                         the furthest possibilities. I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus.</p>
 
                     <hr>
-
+                    {{-- konten broinsta --}}
                     <div class="row">
                         <div class="col-md-4">
 
@@ -48,7 +48,7 @@
                             </div>
                             <div class="titleIbinstaforex">
                                 <a href="#">
-                                    <h5>Forex</h5>
+                                    <h5>Insta forex</h5>
                                 </a>
                             </div>
                         </div>
@@ -58,7 +58,7 @@
                             </div>
                             <div class="titleIbinstaforex">
                                 <a href="#">
-                                    <h5>Option</h5>
+                                    <h5>Pembukaan Akun</h5>
                                 </a>
                             </div>
                         </div>
@@ -68,12 +68,45 @@
                             </div>
                             <div class="titleIbinstaforex">
                                 <a href="#">
-                                    <h5>CryptoCurrency</h5>
+                                    <h5>Validasi Akun</h5>
                                 </a>
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-md-4">
 
+                            <div class="imgIbinstaforex">
+                                <img src="assets/img/slide/slide-1.jpg" alt="" style="width:100%; border-radius:8px;">
+                            </div>
+                            <div class="titleIbinstaforex">
+                                <a href="#">
+                                    <h5>Verifikasi akun</h5>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="imgIbinstaforex">
+                                <img src="assets/img/slide/slide-1.jpg" alt="" style="width:100%; border-radius:8px;">
+                            </div>
+                            <div class="titleIbinstaforex">
+                                <a href="#">
+                                    <h5>Withdrawal</h5>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="imgIbinstaforex">
+                                <img src="assets/img/slide/slide-1.jpg" alt="" style="width:100%; border-radius:8px;">
+                            </div>
+                            <div class="titleIbinstaforex">
+                                <a href="#">
+                                    <h5>Disclaimer</h5>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- end konten broinsta --}}
                     <hr>
 
                     <div class="titleIbinstaforex">

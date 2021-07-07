@@ -1,23 +1,28 @@
 @extends('index')
 
 @section('content')
-<div class="col-12 col-lg-4 col-md-4 offset-md-1 align-self-center center-bar text-center justify-content-center d-flex">
+   <!-- middle content -->
+
+   <div class="col-12 col-lg-6 col-md-6 align-self-center center-bar  justify-content-center d-flex pt-3">
+
     <div class="card">
         <!-- ======= Breadcrumbs ======= -->
         <div id="breadcrumbs" class="breadcrumbs">
             <div class="container">
 
                 <div class="d-flex justify-content-between align-items-center">
-                    <h2>Check Status Afiliasi</h2>
+                    <h2>Panduan verifikasi akun</h2>
                     <ol>
                         <li><a href="index.html">Home</a></li>
-                        <li>Check Status Afiliasi</li>
+                        <li>Verifikasi Akun</li>
                     </ol>
                 </div>
 
             </div>
         </div>
         <!-- End Breadcrumbs -->
+
+
 
         <div class="card-body">
 
@@ -30,22 +35,10 @@
                     </div>
 
                     <div class="text-left">
-                        <p>Berikut merupakan menu untuk mengecek status afiliasi serta status account Anda.</p>
+                        <p style="line-height: 32px;">Jika Anda berupaya untuk mengakses layanan tambahan yang diberikan oleh InstaForex atau ingin meningkatkan status dari akun trading Anda, Anda bisa memverifikasi akun trading Anda. Verifikasi bukan hal yang
+                            wajib, namun sangat lebih baik jika dilakukan. Selain dari akses akun layanan tambahan, verifikasi akun trading bertujuan menguatkan keyakinan perusahaan terhadap klien.
+                            <br> Untuk memudahkan melakukan verifikasi akun, kami telah membuat panduan yang dapat diikuti langkah-langkahnya oleh klien.</p>
                     </div>
-
-                    <form action="" class="text-left">
-                        <div class="form-group">
-                            <label for="inputAddress">Nomor akun Broninsta</label>
-                            <input type="text" class="form-control col-6" id="inputAddress" placeholder="1234 Main St">
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" class="form-control col-6" id="inputAddress" placeholder="password">
-                        </div>
-
-                        <button type="submit" class="btn btn-primary btn-lg">Check akun</button>
-
-                    </form>
 
                     <hr>
 
@@ -179,6 +172,5 @@
     </div>
 
 </div>
-
 
 @endsection

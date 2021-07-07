@@ -39,7 +39,7 @@
         <div class="container-fluid d-flex align-items-center px-3">
 
             <h1 class="logo mr-auto">
-                <a href="index.html">
+                <a href="/">
                     <img src="{{ asset('assets/img/logo.svg') }}" alt="">
                 </a>
             </h1>
