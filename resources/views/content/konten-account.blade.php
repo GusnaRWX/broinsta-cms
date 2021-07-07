@@ -20,66 +20,42 @@
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         <p style="margin: 0 0 !important;">Login</p>
                         <div class="bold">
-                            <p style="margin: 0 0 !important;">20751636</p>
+                            <p style="margin: 0 0 !important;">{{$members->no_akun}}</p>
                         </div>
                     </li>
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         <p style="margin: 0 0 !important;">Nama Akun</p>
                         <div class="bold">
-                            <p style="margin: 0 0 !important;">Jajang Kusnandar</p>
+                            <p style="margin: 0 0 !important;">{{$members->pemilik_rek}}r</p>
                         </div>
                     </li>
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         <p style="margin: 0 0 !important;">Email</p>
                         <div class="bold">
-                            <p style="margin: 0 0 !important;">jajang@gmail.com</p>
+                            <p style="margin: 0 0 !important;">{{$members->email}}</p>
                         </div>
                     </li>
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         <p style="margin: 0 0 !important;">No. Telepon</p>
                         <div class="bold">
-                            <p style="margin: 0 0 !important;">08121802743</p>
-                        </div>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        <p style="margin: 0 0 !important;">Balance</p>
-                        <div class="bold">
-                            <p style="margin: 0 0 !important;">$0.0</p>
-                        </div>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        <p style="margin: 0 0 !important;">Bonus</p>
-                        <div class="bold">
-                            <p style="margin: 0 0 !important;">$0.0</p>
-                        </div>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        <p style="margin: 0 0 !important;">Available WD</p>
-                        <div class="bold">
-                            <p style="margin: 0 0 !important;">$0.0</p>
-                        </div>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        <p style="margin: 0 0 !important;">Point</p>
-                        <div class="bold">
-                            <p style="margin: 0 0 !important;">3</p>
+                            <p style="margin: 0 0 !important;">{{$member->phone}}</p>
                         </div>
                     </li>
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         <p style="margin: 0 0 !important;">Rebate kirim ke</p>
                         <div class="bold">
-                            <p style="margin: 0 0 !important;"> <b>20751636</b> - Rosid mansur hadi prayikno</p>
+                            <p style="margin: 0 0 !important;"> <b>{{$members->rebate}}</b> - {{$members->pemilik_rek_rebate}}</p>
                         </div>
                     </li>
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         <p style="margin: 0 0 !important;">WD kirim ke</p>
                         <div class="bold">
-                            <p style="margin: 0 0 !important;">20751636</p>
+                            <p style="margin: 0 0 !important;">{{$members->no_rek}}}</p>
                         </div>
                     </li>
                 </ul>
 
-                <button type="submit" class="btn btn-secondary-border btn-lg mt-4">Log out</button>
+                <a type="button" href="{{route('broinsta.home')}}" class="btn btn-secondary-border btn-lg mt-4">Back To Home</a>
             </div>
 
         </div>

@@ -32,15 +32,26 @@
                     <div class="text-left">
                         <p>Berikut merupakan menu untuk mengecek status afiliasi serta status account Anda.</p>
                     </div>
+                    @if (session('errors'))
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="alert alert-warning">
+                                {{session('errors')}}
+                            </div>
+                         </div>
+                     </div>
+                    @endif
 
-                    <form action="" class="text-left">
+                    <form action="{{route('affiliate.check')}}" class="text-left" enctype="multipart/form-data" method="POST">
+                        @csrf
+                        @method("POST")
                         <div class="form-group">
                             <label for="inputAddress">Nomor akun Broninsta</label>
-                            <input type="text" class="form-control col-6" id="inputAddress" placeholder="1234 Main St">
+                            <input type="text" class="form-control col-6" id="inputAddress" placeholder="1234 Main St" name="login">
                         </div>
                         <div class="form-group">
                             <label for="password">Password</label>
-                            <input type="password" class="form-control col-6" id="inputAddress" placeholder="password">
+                            <input type="password" class="form-control col-6" id="inputAddress" placeholder="password" name="password">
                         </div>
 
                         <button type="submit" class="btn btn-primary btn-lg">Check akun</button>

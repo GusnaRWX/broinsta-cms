@@ -20,6 +20,10 @@ Route::group(['prefix' => '/'], function () {
     Route::post('/deposit', 'App\Http\Controllers\IndexController@store')->name('deposit.index');
     Route::post('/validasi', 'App\Http\Controllers\IndexController@getValidasi')->name('deposit.validasi');
     Route::put('/validasi/{id}', 'App\Http\Controllers\ClientController@Update')->name('members.update');
+    Route::get('/affiliate', 'App\Http\Controllers\AffiliateController@showAffiliate')->name('broinsta.affiliate');
+    Route::post('/affiliate/check', 'App\Http\Controllers\AffiliateController@checkAffiliate')->name('affiliate.check');
+    Route::post('/withdraw', 'App\Http\Controllers\WithdrawController@validasiWithdraw')->name('withdraw.validasi');
+    Route::put('withdraw/{id}', 'App\Http\Controllers\WithdrawController@Update')->name('withdraw.update');
 });
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

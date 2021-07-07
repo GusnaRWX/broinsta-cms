@@ -159,7 +159,7 @@
 
                                     <div class="col-md-6 ">
                                         <div class="buatAkun">
-                                            <button type="button" class="btn btn-primary btn-lg btn-block">Check Affiliate</button>
+                                            <a type="button" href="{{route('broinsta.affiliate')}}" class="btn btn-primary btn-lg btn-block"><i class="now-ui-icons objects_umbrella-13"></i>Affiliate</a>
                                         </div>
                                     </div>
                                 </div>
@@ -291,17 +291,19 @@
                                                         <div class="card-form">
                                                             <p class="card-text">Broinsta adalah IB (Introduction Broker) atau perwaklian resmi dari Insta Forex Indonesia yang didirikan dengan tujuan untuk membantu. </p>
                                                             <hr>
-                                                            <form >
+                                                            <form action="{{route('withdraw.validasi')}}" enctype="multipart/form-data" method="POST" autocomplete="off" >
+                                                                @csrf
+                                                                @method('POST')
                                                                 <div class="form-group">
                                                                     <label for="inputAddress">Nomor akun Broninsta</label>
-                                                                    <input type="text" class="form-control" id="inputAddress" placeholder="Nomor Akun anda">
+                                                                    <input type="text" class="form-control" id="inputAddress" placeholder="Nomor Akun anda" name="no_akun">
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label for="inputAddress">Password</label>
-                                                                    <input type="password" class="form-control" id="inputAddress" placeholder="password">
+                                                                    <input type="password" class="form-control" id="inputAddress" placeholder="password" name="password">
                                                                 </div>
 
-                                                                <button type="submit" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#formWithdraw" id="submitWitdraw">Submit</button>
+                                                                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
                                                             </form>
                                                         </div>
                                                     </div>
