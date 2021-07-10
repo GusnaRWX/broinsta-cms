@@ -11,10 +11,10 @@
             <div class="container">
 
                 <div class="d-flex justify-content-between align-items-center">
-                    <h2>Edukasi Forex</h2>
+                    <h2>Group Diskusi</h2>
                     <ol>
                         <li><a href="/">Home</a></li>
-                        <li>Edukasi Forex</li>
+                        <li>Group Diskusi</li>
                     </ol>
                 </div>
 
@@ -35,12 +35,10 @@
                     </div>
 
                     <div class="text-left">
-                        <h5>
-                            <b>Edukasi Forex</b>
-                        </h5>
                         <p style="line-height: 32px;">
-                            -
+                            Kami membuka grup diskusi khusus untuk tempat sharing dan saling bertukar informasi seputar InstaForex dan BROINSTA pada halaman group diskusi Facebook.
                         </p>
+                        <p>Silahkan Anda bergabung di halaman facebook kami untuk turut berpartisipasi. Klik link berikut untuk bergabung:  <a href="#">https://goo.gl/afBYtq</a> </p>
                     </div>
 
 
