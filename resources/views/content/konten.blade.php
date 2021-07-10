@@ -292,6 +292,33 @@
 });
 </script>
 
+<div id="tallModal" class="modal modal-wide fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-body">
+            <div class="row">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <span class="img-modal">
+                    <img src="{{ asset('assets/img/about.jpg') }}" alt="">
+                </span>
+            </div>
+        </div>
+
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <script src="{{ asset('assets/vendor/jquery/jquery.min.js') }}"></script>
+  <script>
+
+      $(document).ready(function() {
+  $('#tallModal').modal('show');
+
+});
+  </script>
+
+
 
 @endsection
 

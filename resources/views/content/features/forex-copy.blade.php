@@ -11,10 +11,10 @@
             <div class="container">
 
                 <div class="d-flex justify-content-between align-items-center">
-                    <h2>Edukasi Forex</h2>
+                    <h2>Forex Copy</h2>
                     <ol>
                         <li><a href="/">Home</a></li>
-                        <li>Edukasi Forex</li>
+                        <li>Forex Copy</li>
                     </ol>
                 </div>
 
@@ -35,11 +35,11 @@
                     </div>
 
                     <div class="text-left">
-                        <h5>
-                            <b>Edukasi Forex</b>
-                        </h5>
+                       
                         <p style="line-height: 32px;">
-                            -
+                            Bagi Anda para trader yang telah siap membantu trader lain dengan system Forex Copy, kami mengundang Anda untuk turut serta dengan mempublikasikan link forex copy trader Anda pada salah satu thread kami di group fb. Dengan mempublikasikan link forex copy trader, maka dapat lebih memudahkan klien yang berkeinginan menjadi follower untuk melihat portfolio trading Anda lalu bergabung menjadi investor.
+
+                            Begitu pula dengan Anda, klien yang sedang mencari trader dengan portfolio yang sesuai, dapat memilih pula pada daftar trader yang telah mempublikasikan link trader masing-masing.
                         </p>
                     </div>
 

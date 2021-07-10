@@ -517,6 +517,12 @@ x
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> c7e738befa9082c6ac3fd2f8b184275185a861ba
       {{-- modal form Withdraw--}}
       <div class="modal fade modal-form" id="formWithdraw" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -582,7 +588,7 @@ x
     <script src="{{ asset('assets/js/main.js') }}"></script>
 
     <script>
- $('#submitWitdraw').on('click', function(e) {
+$('#submitWitdraw').on('click', function(e) {
             e.preventDefault()
         })
 
