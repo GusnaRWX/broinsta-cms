@@ -24,6 +24,7 @@ Route::group(['prefix' => '/'], function () {
     Route::post('/affiliate/check', 'App\Http\Controllers\AffiliateController@checkAffiliate')->name('affiliate.check');
     Route::post('/withdraw', 'App\Http\Controllers\WithdrawController@validasiWithdraw')->name('withdraw.validasi');
     Route::put('withdraw/{id}', 'App\Http\Controllers\WithdrawController@Update')->name('withdraw.update');
+    Route::get('/pembukaan-akun', 'App\Http\Controllers\PembukaanAkunController@getIndex')->name('broinsta.pembukaan-akun');
 });
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

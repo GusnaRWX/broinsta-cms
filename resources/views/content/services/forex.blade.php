@@ -1,9 +1,7 @@
 @extends('index')
 
 @section('content')
-  <!-- middle content -->
-
-  <div class="col-12 col-lg-6 col-md-6 align-self-center center-bar  justify-content-center d-flex pt-3">
+<div class="col-12 col-lg-6 col-md-6 align-self-center center-bar  justify-content-center d-flex pt-3">
 
     <div class="card">
         <!-- ======= Breadcrumbs ======= -->
@@ -11,10 +9,11 @@
             <div class="container">
 
                 <div class="d-flex justify-content-between align-items-center">
-                    <h2>Check Status Afiliasi</h2>
+                    <h2>Forex</h2>
                     <ol>
                         <li><a href="/">Home</a></li>
-                        <li>About instaforex</li>
+                        <li>Services</li>
+                        <li>Forex</li>
                     </ol>
                 </div>
 
@@ -35,24 +34,17 @@
                     </div>
 
                     <div class="text-left">
-                        <p style="line-height: 32px;">Instaforex.com adalah milik InstaForex Companies Group yang telah memberikan layanan online trading ke berbagai pelanggan di lebih dari 50 negara di dunia (kebanyakan berasal dari Eropa dan Asia) sejak tahun
-                            2007. Banyak trader sudah membuka rekening di Instaforex.com untuk menginvestasikan dananya dalam bentuk mata uang dan pasar setiap harinya. Layanan utama InstaForex diarahkan pada pasar pertukaran Internasional
-                            menggunakan internet trading. Tidak hanya menggunakan teknologi akses elektronik yang mutakhir, namun elemen bisnis fundamental broker yang didasarkan pada riwayat jangka panjang dan kontinuitas pasar uang
-                            merupakan layanan utama untuk mencapai layanan trading terbaik. InstaForex mewadahi akses online pertukaran internasional dengan menggunakan MetaTrader 4, yaitu platform trading terkemuka di dunia yang memenuhi
-                            tuntukan layanan modern di bidang internet trading. Saat ini InstaForex bekerja dengan market-maker terkemuka untuk mengambil posisi net di dalam pasar interbank. Hal ini mengharuskan InstaForex untuk terus
-                            menerus bekerja dengan klien yang berarti bahwa ketika Anda menggunakan layanan InstaForex, maka Anda yakin bahwa anda menghasilkan investasi dari nilai tukar mata uang. InstaForex menawarkan kenyamanan
-                            dan term trading yang menguntungkan bagi semua klien, tanpa mempertimbangkan jumlah setoran yang diberikan. Perlakuan tersebut penting bagi InstaForex yang berusaha untuk membangun hubungan baik dengan pelanggan.</p>
-                        <br>
-                        <h4>
-                            <b>Keuntungan trading di Instaforex</b>
-                        </h4>
-                        <p style="line-height: 32px;">
-                            Tanpa upload KTP. Spread tetap (fix) mulai dari 3 pips. Tidak ada komisi. Nano Trade (1lot/1Pips = $1) dengan Leverage maximal 1:1000. sehingga sangat mudah. Tanpa bunga (swap) >> Account Islamic. Bisa menggunakan robot trading apapun. Full Hedging. Mulai
-                            trading dengan 0.01 lot ($0,01/ 1 Pips) Minimal deposit $1 Welcome Bonus sampai dengan $5000,- atau 30% dari Deposit Regulasi terpercaya
-                            <p>
-                                <b> The Federal Financial Markets Service Rebate 1.5 pips dan bonus tambahan. (Khusus dibawah jaringan proifxib.com). *untuk informasi lebih lanjut, silakan hubungi customer service kami</b>.
+                        <p style="line-height: 32px;">Pasar Valuta Asing (bahasa Inggris: Foreign Exchange Market, FOREX) atau disingkat valas merupakan suatu jenis perdagangan atau transaksi yang memperdagangkan mata uang suatu negara terhadap mata uang negara lainnya (pasangan mata uang/pair) yang melibatkan pasar-pasar uang utama di dunia selama 24 jam secara berkesinambungan. Dalam perkembangan sejarahnya, bank sentral milik negara-negara dengan cadangan mata uang asing yang terbesar sekalipun dapat dikalahkan oleh kekuatan pasar valuta asing yang bebas. Menurut survei BIS (Bank International for Settlement, bank sentral dunia), yang dilakukan pada akhir tahun 2004, nilai transaksi pasar valuta asing mencapai lebih dari USD 1,4 triliun per harinya.
+
+                            Mengingat tingkat likuiditas dan percepatan pergerakan harga yang tinggi tersebut, valuta asing juga telah menjadi investasi alternatif yang paling populer karena ROI (return of investment atau tingkat pengembalian investasi) serta laba yang akan didapat bisa melebihi rata-rata perdagangan pada umumnya. Akibat pergerakan yang cepat tersebut, maka pasar valuta asing juga memiliki risiko yang sangat tinggi.
+                            
+                            Perusahaan InstaForex selaku Perusahaan Pialang Internasional dari Rusia, turut menyediakan akses bagi para trader Indonesia yang ingin berinvestasi/berdagang forex dengan modal minimal untuk mendapatkan profit maksimal.
+                            
+                            BROINSTA selaku Perwakilan Resmi dari Insta Forex Rusia untuk Indonesia senantiasa siap melayani trader/investor Indonesia yang ingin Trading Forex di bursa internasional, menggunakan Bank BCA - Mandiri - BNI.
+                            
                             </p>
-                        </p>
+                        <br>
+                        
                     </div>
 
 
@@ -94,5 +86,6 @@
     </div>
 
 </div>
+
 
 @endsection

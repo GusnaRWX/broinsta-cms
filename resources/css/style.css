@@ -1,53 +1,49 @@
-/**
-* Template Name: Green - v2.3.1
-* Template URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
 html {
-  --scrollbarBG: #CFD8DC;
-  --thumbBG: #90A4AE;
+    --scrollbarBG: #CFD8DC;
+    --thumbBG: #90A4AE;
 }
+
 body::-webkit-scrollbar {
-  width: 11px;
+    width: 11px;
 }
+
 body {
-  scrollbar-width: thin;
-  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
 }
+
 body::-webkit-scrollbar-track {
-  background: var(--scrollbarBG);
+    background: var(--scrollbarBG);
 }
+
 body::-webkit-scrollbar-thumb {
-  background-color: var(--thumbBG) ;
-  border-radius: 6px;
-  border: 3px solid var(--scrollbarBG);
+    background-color: var(--thumbBG);
+    border-radius: 6px;
+    border: 3px solid var(--scrollbarBG);
 }
 
 .scroll-area::-webkit-scrollbar {
     width: 11px;
-  }
-  .scroll-area {
+}
+
+.scroll-area {
     scrollbar-width: thin;
     scrollbar-color: var(--thumbBG) var(--scrollbarBG);
-  }
-  .scroll-area::-webkit-scrollbar-track {
+}
+
+.scroll-area::-webkit-scrollbar-track {
     background: var(--scrollbarBG);
-  }
-  .scroll-area::-webkit-scrollbar-thumb {
-    background-color: var(--thumbBG) ;
+}
+
+.scroll-area::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG);
     border-radius: 6px;
     border: 3px solid var(--scrollbarBG);
-  }
-
-
-
-
+}
 
 text-white {
     color: #fff;
@@ -217,7 +213,7 @@ h6 {
     display: flex;
 }
 
-.nav-menu>ul>li{
+.nav-menu>ul>li {
     position: relative;
     white-space: nowrap;
     padding: 8px 0 8px 12px;
@@ -842,30 +838,32 @@ h6 {
 .modal.modal-wide .modal-dialog {
     width: 100%;
     max-width: 50%;
-  }
-  .modal-body{
-      position: relative;
-      padding: 0px;
-      border-radius: 8px;
-      
-  }
-  .close{
-      position: absolute;
-      right: 12px;
-      top: 12px;
-  }
-  .modal-wide .modal-body {
-    overflow: hidden;
-  }
-  
-  .modal-body .img-modal img {
-    width: 100%;
-    height:auto;
-  }
+}
 
-  #tallModal .modal-body p { 
-      /* margin-bottom: 900px ; */
-    }
+.modal-body {
+    position: relative;
+    padding: 0px;
+    border-radius: 8px;
+}
+
+.close {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+}
+
+.modal-wide .modal-body {
+    overflow: hidden;
+}
+
+.modal-body .img-modal img {
+    width: 100%;
+    height: auto;
+}
+
+#tallModal .modal-body p {
+    /* margin-bottom: 900px ; */
+}
 
 .center-bar {
     position: relative;
@@ -937,13 +935,13 @@ h6 {
     line-height: 20px;
 }
 
-
-.buatAkun .btn-primary .now-ui-icons{
+.buatAkun .btn-primary .now-ui-icons {
     font-size: 14px;
     position: relative;
     top: 1px;
     margin-right: 4px;
 }
+
 
 /* end mona */
 
@@ -2144,9 +2142,9 @@ body .robot {
 
 .breadcrumbs {
     padding: 15px 0;
-    background: #fbfbfb;
+    /* background: #fbfbfb; */
     min-height: 40px;
-    margin-top: 122px;
+    /* margin-top: 122px; */
 }
 
 @media (max-width: 992px) {
