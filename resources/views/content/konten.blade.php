@@ -52,7 +52,7 @@
                                 <img src="assets/img/slide/slide-1.jpg" alt="" style="width:100%; border-radius:8px;">
                             </div>
                             <div class="titleIbinstaforex">
-                                <a href="#">
+                                <a href="{{route('broinsta.instaforex')}}">
                                     <h5>Insta forex</h5>
                                 </a>
                             </div>
@@ -62,7 +62,7 @@
                                 <img src="assets/img/slide/slide-1.jpg" alt="" style="width:100%; border-radius:8px;">
                             </div>
                             <div class="titleIbinstaforex">
-                                <a href="#">
+                                <a href="{{route('broinsta.pembukaan-akun')}}">
                                     <h5>Pembukaan Akun</h5>
                                 </a>
                             </div>
@@ -72,7 +72,7 @@
                                 <img src="assets/img/slide/slide-1.jpg" alt="" style="width:100%; border-radius:8px;">
                             </div>
                             <div class="titleIbinstaforex">
-                                <a href="#">
+                                <a href="{{route('broinsta.validasi-akun')}}">
                                     <h5>Validasi Akun</h5>
                                 </a>
                             </div>
@@ -85,7 +85,7 @@
                                 <img src="assets/img/slide/slide-1.jpg" alt="" style="width:100%; border-radius:8px;">
                             </div>
                             <div class="titleIbinstaforex">
-                                <a href="#">
+                                <a href="{{route('broinsta.verifikasi-akun')}}">
                                     <h5>Verifikasi akun</h5>
                                 </a>
                             </div>
@@ -95,7 +95,7 @@
                                 <img src="assets/img/slide/slide-1.jpg" alt="" style="width:100%; border-radius:8px;">
                             </div>
                             <div class="titleIbinstaforex">
-                                <a href="#">
+                                <a href="{{route('broinsta.withdrawal')}}">
                                     <h5>Withdrawal</h5>
                                 </a>
                             </div>
@@ -105,7 +105,7 @@
                                 <img src="assets/img/slide/slide-1.jpg" alt="" style="width:100%; border-radius:8px;">
                             </div>
                             <div class="titleIbinstaforex">
-                                <a href="#">
+                                <a href="{{route('broinsta.disclaimer')}}">
                                     <h5>Disclaimer</h5>
                                 </a>
                             </div>
@@ -233,7 +233,6 @@
                     <p>I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. So when you get something that has the name Kanye West on it, it’s supposed to be pushing
                         the furthest possibilities. I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus.</p>
                 </div>
-
                 {{--news content  --}}
                 <div class="tab-pane" id="news" role="tabpanel">
                     <div class="row">
@@ -259,7 +258,7 @@
                             </div>
                         </div>
                     </div>
-                
+
                 </div>
 
             </div>
@@ -267,6 +266,32 @@
     </div>
 
 </div>
+<div id="tallModal" class="modal modal-wide fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-body">
+            <div class="row">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <span class="img-modal">
+                    <img src="{{ asset('assets/img/about.jpg') }}" alt="">
+                </span>
+            </div>
+        </div>
+
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+
+
+  <script src="{{ asset('assets/vendor/jquery/jquery.min.js') }}"></script>
+<script>
+          $(document).ready(function() {
+  $('#tallModal').modal('show');
+});
+</script>
 
 
 @endsection
+

@@ -28,6 +28,7 @@ class VoyagerDatabaseSeeder extends Seeder
             TestimonialAdminSeeder::class,
             ClientAdminSeeder::class,
             WithdrawAdminSeeder::class,
+            IntroAdminSeeder::class,
         ]);
     }
 }

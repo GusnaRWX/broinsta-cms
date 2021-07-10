@@ -25,6 +25,11 @@ Route::group(['prefix' => '/'], function () {
     Route::post('/withdraw', 'App\Http\Controllers\WithdrawController@validasiWithdraw')->name('withdraw.validasi');
     Route::put('withdraw/{id}', 'App\Http\Controllers\WithdrawController@Update')->name('withdraw.update');
     Route::get('/pembukaan-akun', 'App\Http\Controllers\PembukaanAkunController@getIndex')->name('broinsta.pembukaan-akun');
+    Route::get('/instaforex', 'App\Http\Controllers\ContentController@getInstaforex')->name('broinsta.instaforex');
+    Route::get('/validasi-akun', 'App\Http\Controllers\ContentController@getValidasiAkun')->name('broinsta.validasi-akun');
+    Route::get('/verifikasi-akun', 'App\Http\Controllers\ContentController@getVerifikasi')->name('broinsta.verifikasi-akun');
+    Route::get('/withdrawal', 'App\Http\Controllers\ContentController@getWithdraw')->name('broinsta.withdrawal');
+    Route::get('/disclaimer', 'App\Http\Controllers\ContentController@getDisclaimer')->name('broinsta.disclaimer');
 });
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

@@ -152,7 +152,7 @@
                                 <div class="row">
                                     <div class="col-md-6 ">
                                         <div class="buatAkun">
-                                            
+
                                                 <a type="button" href="{{route('broinsta.pembukaan-akun')}}" class="btn btn-primary btn-lg btn-block"><i class="now-ui-icons objects_umbrella-13"></i>Buat Akun</a>
                                         </div>
                                     </div>
@@ -517,25 +517,6 @@ x
 
 
 
-    <div id="tallModal" class="modal modal-wide fade">
-        <div class="modal-dialog">
-          <div class="modal-content">
-
-            <div class="modal-body">
-                <div class="row">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <span class="img-modal">
-                        <img src="{{ asset('assets/img/about.jpg') }}" alt="">
-                    </span>
-                </div>
-            </div>
-
-          </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-      </div><!-- /.modal -->
-
-
-
       {{-- modal form Withdraw--}}
       <div class="modal fade modal-form" id="formWithdraw" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -601,16 +582,7 @@ x
     <script src="{{ asset('assets/js/main.js') }}"></script>
 
     <script>
-
-
-
-        $(document).ready(function() {
-  $('#tallModal').modal('show');
-
-});
-
-
-$('#submitWitdraw').on('click', function(e) {
+ $('#submitWitdraw').on('click', function(e) {
             e.preventDefault()
         })
 
