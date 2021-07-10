@@ -30,6 +30,7 @@ Route::group(['prefix' => '/'], function () {
     Route::get('/verifikasi-akun', 'App\Http\Controllers\ContentController@getVerifikasi')->name('broinsta.verifikasi-akun');
     Route::get('/withdrawal', 'App\Http\Controllers\ContentController@getWithdraw')->name('broinsta.withdrawal');
     Route::get('/disclaimer', 'App\Http\Controllers\ContentController@getDisclaimer')->name('broinsta.disclaimer');
+    Route::get('/news/{slug}', 'App\Http\Controllers\NewsController@showDetail')->name('news.detail');
 });
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

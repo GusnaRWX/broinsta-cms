@@ -8,6 +8,7 @@ use App\Models\Support;
 use App\Models\Testimonial;
 use App\Models\Deposit;
 use App\Models\Client;
+use App\Models\Post;
 
 class IndexController extends Controller
 {
@@ -16,7 +17,8 @@ class IndexController extends Controller
         $kurses = Kurse::all();
         $supports = Support::all();
         $testimonials = Testimonial::all();
-        return view('content.konten', ['kurses' => $kurses, 'supports' => $supports, 'testimonials' => $testimonials]);
+        $posts = Post::all();
+        return view('content.konten', ['kurses' => $kurses, 'supports' => $supports, 'testimonials' => $testimonials, 'posts' => $posts]);
     }
 
     public function store(Request $request){

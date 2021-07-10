@@ -236,27 +236,19 @@
                 {{--news content  --}}
                 <div class="tab-pane" id="news" role="tabpanel">
                     <div class="row">
-                        <div class="col-md-6">
+                        @foreach ($posts as $post)
 
-                            <div class="imgIbinstaforex">
-                                <img src="assets/img/slide/slide-1.jpg" alt="" style="width:100%; border-radius:8px;">
-                            </div>
-                            <div class="titleIbinstaforex">
-                                <a href="#">
-                                    <h5>Forex</h5>
-                                </a>
-                            </div>
-                        </div>
                         <div class="col-md-6">
                             <div class="imgIbinstaforex">
-                                <img src="assets/img/slide/slide-1.jpg" alt="" style="width:100%; border-radius:8px;">
+                                <img src="{{$post->image}}" alt="" style="width:100%; border-radius:8px;">
                             </div>
                             <div class="titleIbinstaforex">
-                                <a href="">
-                                    <h5>Option</h5>
+                                <a href="{{route('news.detail', $post->slug)}}">
+                                    <h5>{{$post->title}}</h5>
                                 </a>
                             </div>
                         </div>
+                        @endforeach
                     </div>
 
                 </div>
