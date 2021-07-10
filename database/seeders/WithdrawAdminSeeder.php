@@ -7,7 +7,7 @@ use TCG\Voyager\Models\DataRow;
 use TCG\Voyager\Models\DataType;
 use TCG\Voyager\Models\Permission;
 
-class DepositAdminSeeder extends Seeder
+class WithdrawAdminSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,14 +16,14 @@ class DepositAdminSeeder extends Seeder
      */
     public function run()
     {
-        $dataType = $this->dataType('slug', 'deposits');
+        $dataType = $this->dataType('slug', 'withdraws');
         if (!$dataType->exists) {
             $dataType->fill([
-                'name'                  => 'deposits',
-                'display_name_singular' => 'deposit',
-                'display_name_plural'   => 'deposits',
-                'icon'                  => 'voyager-wallet',
-                'model_name'            => 'App\Models\Deposit',
+                'name'                  => 'withdraws',
+                'display_name_singular' => 'withdraw',
+                'display_name_plural'   => 'withdraws',
+                'icon'                  => 'voyager-dollar',
+                'model_name'            => 'App\Models\Withdraw',
                 'policy_name'           => '',
                 'controller'            => '',
                 'generate_permissions'  => 1,
@@ -31,7 +31,7 @@ class DepositAdminSeeder extends Seeder
             ])->save();
         }
         //Data Rows
-        $postDataType = DataType::where('slug', 'deposits')->firstOrFail();
+        $postDataType = DataType::where('slug', 'withdraws')->firstOrFail();
         $dataRow = $this->dataRow($postDataType, 'id');
         if (!$dataRow->exists) {
             $dataRow->fill([
@@ -47,7 +47,7 @@ class DepositAdminSeeder extends Seeder
             ])->save();
         }
 
-        $dataRow = $this->dataRow($postDataType, 'account_number');
+        $dataRow = $this->dataRow($postDataType, 'no_akun');
         if (!$dataRow->exists) {
             $dataRow->fill([
                 'type' => 'text',
@@ -62,35 +62,6 @@ class DepositAdminSeeder extends Seeder
             ])->save();
         }
 
-        $dataRow = $this->dataRow($postDataType, 'deposit');
-        if (!$dataRow->exists) {
-            $dataRow->fill([
-                'type' => 'text',
-                'display_name' => 'Deposit',
-                'required' => 1,
-                'browse' => 1,
-                'read' => 1,
-                'edit' => 0,
-                'add' => 0,
-                'delete' => 0,
-                'order' => 2,
-            ])->save();
-        }
-
-        $dataRow = $this->dataRow($postDataType, 'transfer');
-        if (!$dataRow->exists) {
-            $dataRow->fill([
-                'type' => 'text',
-                'display_name' => 'Transfer',
-                'required' => 1,
-                'browse' => 1,
-                'read' => 1,
-                'edit' => 0,
-                'add' => 0,
-                'delete' => 0,
-                'order' => 3,
-            ])->save();
-        }
 
         $dataRow = $this->dataRow($postDataType, 'email');
         if (!$dataRow->exists) {
@@ -103,7 +74,7 @@ class DepositAdminSeeder extends Seeder
                 'edit' => 0,
                 'add' => 0,
                 'delete' => 0,
-                'order' => 4,
+                'order' => 2,
             ])->save();
         }
 
@@ -118,7 +89,22 @@ class DepositAdminSeeder extends Seeder
                 'edit' => 0,
                 'add' => 0,
                 'delete' => 0,
-                'order' => 5,
+                'order' => 3,
+            ])->save();
+        }
+
+        $dataRow = $this->dataRow($postDataType, 'withdraw');
+        if (!$dataRow->exists) {
+            $dataRow->fill([
+                'type' => 'text',
+                'display_name' => 'Withdraw',
+                'required' => 1,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 0,
+                'add' => 0,
+                'delete' => 0,
+                'order' => 4,
             ])->save();
         }
 
@@ -133,7 +119,7 @@ class DepositAdminSeeder extends Seeder
                 'edit' => 0,
                 'add' => 0,
                 'delete' => 0,
-                'order' => 6,
+                'order' => 5,
             ])->save();
         }
 
@@ -148,52 +134,22 @@ class DepositAdminSeeder extends Seeder
                 'edit' => 0,
                 'add' => 0,
                 'delete' => 0,
+                'order' => 6,
+            ])->save();
+        }
+
+        $dataRow = $this->dataRow($postDataType, 'pemilik_rek');
+        if (!$dataRow->exists) {
+            $dataRow->fill([
+                'type' => 'text',
+                'display_name' => 'Nama Pemililk Rekening',
+                'required' => 1,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 0,
+                'add' => 0,
+                'delete' => 0,
                 'order' => 7,
-            ])->save();
-        }
-
-        $dataRow = $this->dataRow($postDataType, 'name_rek');
-        if (!$dataRow->exists) {
-            $dataRow->fill([
-                'type' => 'text',
-                'display_name' => 'Nama Rekening',
-                'required' => 1,
-                'browse' => 1,
-                'read' => 1,
-                'edit' => 0,
-                'add' => 0,
-                'delete' => 0,
-                'order' => 8,
-            ])->save();
-        }
-
-        $dataRow = $this->dataRow($postDataType, 'bank_transfer');
-        if (!$dataRow->exists) {
-            $dataRow->fill([
-                'type' => 'text',
-                'display_name' => 'Bank Transfer',
-                'required' => 1,
-                'browse' => 1,
-                'read' => 1,
-                'edit' => 0,
-                'add' => 0,
-                'delete' => 0,
-                'order' => 9,
-            ])->save();
-        }
-
-        $dataRow = $this->dataRow($postDataType, 'file');
-        if (!$dataRow->exists) {
-            $dataRow->fill([
-                'type' => 'image',
-                'display_name' => 'Bukti Pembayaran',
-                'required' => 1,
-                'browse' => 1,
-                'read' => 1,
-                'edit' => 0,
-                'add' => 0,
-                'delete' => 0,
-                'order' => 10,
             ])->save();
         }
 
@@ -208,7 +164,7 @@ class DepositAdminSeeder extends Seeder
                 'edit' => 1,
                 'add' => 0,
                 'delete' => 0,
-                'order' => 11,
+                'order' => 8,
                 'details' => [
                     'default' => '-- Pilih Status --',
                     'options' => [
@@ -230,7 +186,7 @@ class DepositAdminSeeder extends Seeder
                 'edit' => 0,
                 'add' => 0,
                 'delete' => 0,
-                'order' => 12,
+                'order' => 9,
             ])->save();
         }
 
@@ -245,11 +201,11 @@ class DepositAdminSeeder extends Seeder
                 'edit' => 0,
                 'add' => 0,
                 'delete' => 0,
-                'order' => 13,
+                'order' => 10,
             ])->save();
         }
 
-        Permission::generateFor('deposits');
+        Permission::generateFor('withdraws');
     }
 
      /**

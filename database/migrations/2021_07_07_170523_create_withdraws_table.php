@@ -23,6 +23,7 @@ class CreateWithdrawsTable extends Migration
             $table->string('bank')->nullable();
             $table->string('no_rek')->nullable();
             $table->string('pemilik_rek')->nullable();
+            $table->string('status')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

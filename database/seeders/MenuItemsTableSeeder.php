@@ -115,6 +115,22 @@ class MenuItemsTableSeeder extends Seeder
             'order' => 8,
             'url' => '',
         ]);
+        $itemMenu = MenuItem::firstOrCreate([
+            'menu_id' => $menu->id,
+            'title' => 'Withdraws',
+            'route' => 'voyager.withdraws.index',
+            'icon_class' => 'voyager-dollar',
+            'order' => 9,
+            'url' => '',
+        ]);
+        $itemMenu = MenuItem::firstOrCreate([
+            'menu_id' => $menu->id,
+            'title' => 'Clients',
+            'route' => 'voyager.clients.index',
+            'icon_class' => 'voyager-person',
+            'order' => 10,
+            'url' => '',
+        ]);
 
         $toolsMenuItem = MenuItem::firstOrNew([
             'menu_id' => $menu->id,
@@ -127,7 +143,7 @@ class MenuItemsTableSeeder extends Seeder
                 'icon_class' => 'voyager-tools',
                 'color'      => null,
                 'parent_id'  => null,
-                'order'      => 9,
+                'order'      => 11,
             ])->save();
         }
 
@@ -143,7 +159,7 @@ class MenuItemsTableSeeder extends Seeder
                 'icon_class' => 'voyager-list',
                 'color'      => null,
                 'parent_id'  => $toolsMenuItem->id,
-                'order'      => 10,
+                'order'      => 12,
             ])->save();
         }
 
@@ -159,7 +175,7 @@ class MenuItemsTableSeeder extends Seeder
                 'icon_class' => 'voyager-data',
                 'color'      => null,
                 'parent_id'  => $toolsMenuItem->id,
-                'order'      => 11,
+                'order'      => 13,
             ])->save();
         }
 
@@ -175,7 +191,7 @@ class MenuItemsTableSeeder extends Seeder
                 'icon_class' => 'voyager-compass',
                 'color'      => null,
                 'parent_id'  => $toolsMenuItem->id,
-                'order'      => 12,
+                'order'      => 14,
             ])->save();
         }
 
@@ -191,7 +207,7 @@ class MenuItemsTableSeeder extends Seeder
                 'icon_class' => 'voyager-bread',
                 'color'      => null,
                 'parent_id'  => $toolsMenuItem->id,
-                'order'      => 13,
+                'order'      => 15,
             ])->save();
         }
 
@@ -207,7 +223,7 @@ class MenuItemsTableSeeder extends Seeder
                 'icon_class' => 'voyager-settings',
                 'color'      => null,
                 'parent_id'  => null,
-                'order'      => 14,
+                'order'      => 16,
             ])->save();
         }
     }
