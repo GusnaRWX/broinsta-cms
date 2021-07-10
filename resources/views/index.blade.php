@@ -61,7 +61,7 @@
 
                     </li>
                     <li>
-                        <a href="https://secure.ifxtrend.com/id/open-account" target="_blank" class="get-started-btn scrollto">Buat akun</a>
+                        <a href="{{('content.pembukaan-akun')}}" target="_blank" class="get-started-btn scrollto">Buat akun</a>
 
                     </li>
 
@@ -152,8 +152,8 @@
                                 <div class="row">
                                     <div class="col-md-6 ">
                                         <div class="buatAkun">
-                                            <button type="button" class="btn btn-primary btn-lg btn-block">
-                                                <i class="now-ui-icons objects_umbrella-13"></i>Buat Akun</button>
+                                            
+                                                <a type="button" href="{{route('broinsta.pembukaan-akun')}}" class="btn btn-primary btn-lg btn-block"><i class="now-ui-icons objects_umbrella-13"></i>Buat Akun</a>
                                         </div>
                                     </div>
 

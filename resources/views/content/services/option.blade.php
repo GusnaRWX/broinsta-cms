@@ -1,9 +1,7 @@
 @extends('index')
 
 @section('content')
-  <!-- middle content -->
-
-  <div class="col-12 col-lg-6 col-md-6 align-self-center center-bar  justify-content-center d-flex pt-3">
+<div class="col-12 col-lg-6 col-md-6 align-self-center center-bar  justify-content-center d-flex pt-3">
 
     <div class="card">
         <!-- ======= Breadcrumbs ======= -->
@@ -11,10 +9,11 @@
             <div class="container">
 
                 <div class="d-flex justify-content-between align-items-center">
-                    <h2>Check Status Afiliasi</h2>
+                    <h2>Trading Option</h2>
                     <ol>
                         <li><a href="/">Home</a></li>
-                        <li>About instaforex</li>
+                        <li>Services</li>
+                        <li>Option</li>
                     </ol>
                 </div>
 
@@ -30,28 +29,17 @@
             <div class="tab-content text-center">
                 <div class="tab-pane active" id="home" role="tabpanel">
 
-                    <div class="imgIbinstaforex">
+                    {{-- <div class="imgIbinstaforex">
                         <img src="assets/img/slide/slide-1.jpg" alt="" style="width:100%; height:420px; border-radius:8px;">
-                    </div>
+                    </div> --}}
 
                     <div class="text-left">
-                        <p style="line-height: 32px;">Instaforex.com adalah milik InstaForex Companies Group yang telah memberikan layanan online trading ke berbagai pelanggan di lebih dari 50 negara di dunia (kebanyakan berasal dari Eropa dan Asia) sejak tahun
-                            2007. Banyak trader sudah membuka rekening di Instaforex.com untuk menginvestasikan dananya dalam bentuk mata uang dan pasar setiap harinya. Layanan utama InstaForex diarahkan pada pasar pertukaran Internasional
-                            menggunakan internet trading. Tidak hanya menggunakan teknologi akses elektronik yang mutakhir, namun elemen bisnis fundamental broker yang didasarkan pada riwayat jangka panjang dan kontinuitas pasar uang
-                            merupakan layanan utama untuk mencapai layanan trading terbaik. InstaForex mewadahi akses online pertukaran internasional dengan menggunakan MetaTrader 4, yaitu platform trading terkemuka di dunia yang memenuhi
-                            tuntukan layanan modern di bidang internet trading. Saat ini InstaForex bekerja dengan market-maker terkemuka untuk mengambil posisi net di dalam pasar interbank. Hal ini mengharuskan InstaForex untuk terus
-                            menerus bekerja dengan klien yang berarti bahwa ketika Anda menggunakan layanan InstaForex, maka Anda yakin bahwa anda menghasilkan investasi dari nilai tukar mata uang. InstaForex menawarkan kenyamanan
-                            dan term trading yang menguntungkan bagi semua klien, tanpa mempertimbangkan jumlah setoran yang diberikan. Perlakuan tersebut penting bagi InstaForex yang berusaha untuk membangun hubungan baik dengan pelanggan.</p>
-                        <br>
-                        <h4>
-                            <b>Keuntungan trading di Instaforex</b>
-                        </h4>
-                        <p style="line-height: 32px;">
-                            Tanpa upload KTP. Spread tetap (fix) mulai dari 3 pips. Tidak ada komisi. Nano Trade (1lot/1Pips = $1) dengan Leverage maximal 1:1000. sehingga sangat mudah. Tanpa bunga (swap) >> Account Islamic. Bisa menggunakan robot trading apapun. Full Hedging. Mulai
-                            trading dengan 0.01 lot ($0,01/ 1 Pips) Minimal deposit $1 Welcome Bonus sampai dengan $5000,- atau 30% dari Deposit Regulasi terpercaya
-                            <p>
-                                <b> The Federal Financial Markets Service Rebate 1.5 pips dan bonus tambahan. (Khusus dibawah jaringan proifxib.com). *untuk informasi lebih lanjut, silakan hubungi customer service kami</b>.
+                        <h4>Definisi Trading Option</h4>
+                        <p style="line-height: 32px;">Sederhananya, Trading Option bisa diartikan sebagai suatu kontrak yang memberikan hak namun tidak mewajibkan investor untuk membeli atau menjual suatu aset misalnya, saham, valuta asing, atau komoditi di harga tertentu dalam jangka waktu tertentu. Option banyak diminati para investor karena memberi peluang keuntungan dari berbagai arah pergerakan aset seperti bullish (naik), ataupun bearish (turun). Nah, Insta Forex kini juga menyediakan layanan Trading Option bagi para pelanggan setianya di seluruh dunia.
                             </p>
+                        <br>
+                        <h4> Trading Option di Instaforex</h4>
+                        <p style="line-height: 32px;">Trading Opsi InstaForex adalah alat tambahan bagi platform MT4 InstaTrader yang ditujukan untuk meningkatkan fungsionalitasnya, sehingga trader dapat melakukan trading option.
                         </p>
                     </div>
 
@@ -94,5 +82,6 @@
     </div>
 
 </div>
+
 
 @endsection

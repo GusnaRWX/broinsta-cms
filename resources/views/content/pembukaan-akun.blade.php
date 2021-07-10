@@ -97,6 +97,21 @@
 
                     <hr>
 
+                    <h3>Buat akun trading di Broinsta</h3>
+                    <p>Atau klink link berikut ini <a href="https://secure.ifxtrend.com/open-account?lang=id&x=mxsdu">Daftar disini</a></p>
+
+                    {{-- from pembukaan akun --}}
+                    {{-- <h4> Jika terjadi halaman EROR 404 dan pindah halaman ke Instaforex, Anda harus refresh ulang di halaman Pembukaan AKun di BROINSTA</h4>
+                    <iframe id="frame" target="_blank" style='width: 580px;border:1px solid silver;height:auto;'
+src="https://secure.instaforex.com/partner_open_account.aspx?lang=id&x=MXSDU&width=580&showlogo=false&color=red&host=YOUR PAGE WITH IFRAME" style="padding:0; margin:0" scrolling="no" onload="var th=this; setTimeout(function() {var h=null;if (!h) if (location.hash.match(/^#h(\d+)/)) h=RegExp.$1;if (h) th.style
+.height=parseInt(h)+170+'px';}, 10);"
+></iframe> --}}
+{{-- end form pembukaan akun --}}
+
+                    <hr>
+                    
+                    
+
                     <div class="titleIbinstaforex">
                         <h3>Instrumen Trading</h3>
                     </div>

@@ -20,6 +20,11 @@
                         <i class="now-ui-icons shopping_shop"></i> Features
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#news" role="tab">
+                        <i class="now-ui-icons icofont-newspaper"></i> News
+                    </a>
+                </li>
 
             </ul>
         </div>
@@ -197,12 +202,9 @@
                         </div>
                     </div>
                     <hr>
-                    <div class="titleIbinstaforex">
-                        <h3>Instrumen Trading</h3>
-                    </div>
-                    <p> I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities,
-                        to show people, this is the level that things could be at. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. </p>
                 </div>
+
+                {{-- features content --}}
                 <div class="tab-pane" id="messages" role="tabpanel">
                     <div class="row">
                         <div class="col-md-6">
@@ -230,6 +232,34 @@
                     <hr>
                     <p>I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. So when you get something that has the name Kanye West on it, it’s supposed to be pushing
                         the furthest possibilities. I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus.</p>
+                </div>
+
+                {{--news content  --}}
+                <div class="tab-pane" id="news" role="tabpanel">
+                    <div class="row">
+                        <div class="col-md-6">
+
+                            <div class="imgIbinstaforex">
+                                <img src="assets/img/slide/slide-1.jpg" alt="" style="width:100%; border-radius:8px;">
+                            </div>
+                            <div class="titleIbinstaforex">
+                                <a href="#">
+                                    <h5>Forex</h5>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="imgIbinstaforex">
+                                <img src="assets/img/slide/slide-1.jpg" alt="" style="width:100%; border-radius:8px;">
+                            </div>
+                            <div class="titleIbinstaforex">
+                                <a href="">
+                                    <h5>Option</h5>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                
                 </div>
 
             </div>
