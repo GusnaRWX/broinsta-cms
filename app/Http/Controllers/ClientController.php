@@ -15,6 +15,7 @@ class ClientController extends Controller
         $kurses = Kurse::all();
         $supports = Support::all();
         $testimonials = Testimonial::all();
+        $flashes = Post::all();
 
         $members = Client::findOrFail($id);
         $members->email = $request->get('email');
@@ -28,7 +29,7 @@ class ClientController extends Controller
         $members->ktp_penerima = $request->get('ktp_penerima');
         $members->save();
 
-        return view('content.validation-success', ['kurses' => $kurses, 'supports' => $supports, 'testimonials' => $testimonials]);
+        return view('content.validation-success', ['kurses' => $kurses, 'flashes' => $flashes, 'supports' => $supports, 'testimonials' => $testimonials]);
 
     }
 }

@@ -9,6 +9,7 @@ use App\Models\Testimonial;
 use App\Models\Deposit;
 use App\Models\Client;
 use App\Models\Post;
+use App\Models\Intro;
 
 class IndexController extends Controller
 {
@@ -18,7 +19,9 @@ class IndexController extends Controller
         $supports = Support::all();
         $testimonials = Testimonial::all();
         $posts = Post::all();
-        return view('content.konten', ['kurses' => $kurses, 'supports' => $supports, 'testimonials' => $testimonials, 'posts' => $posts]);
+        $intros = Intro::all();
+        $flashes = Post::all();
+        return view('content.konten', ['kurses' => $kurses, 'supports' => $supports, 'testimonials' => $testimonials, 'posts' => $posts, 'intros' => $intros, 'flashes' => $flashes]);
     }
 
     public function store(Request $request){
@@ -48,6 +51,7 @@ class IndexController extends Controller
         $kurses = Kurse::all();
         $supports = Support::all();
         $testimonials = Testimonial::all();
+        $flashes = Post::all();
 
         $login = $request->get('no_akun');
         $password = $request->get('password');
@@ -79,7 +83,7 @@ class IndexController extends Controller
             $clients->save();
             $id = Client::where('no_akun', $login)->first()->id;
             $members = Client::findOrFail($id);
-            return view('content.konten-success', ['kurses' => $kurses, 'supports' => $supports, 'testimonials' => $testimonials, 'members' => $members]);
+            return view('content.konten-success', ['kurses' => $kurses, 'supports' => $supports, 'testimonials' => $testimonials, 'flashes' => $flashes,  'members' => $members]);
         }else{
             return redirect()->back()->with('errors', 'yah ! akun anda tidak ada di partner kami');
         }
@@ -95,6 +99,7 @@ class IndexController extends Controller
         $kurses = Kurse::all();
         $supports = Support::all();
         $testimonials = Testimonial::all();
+        $flashes = Post::all();
 
         $no_akun = $request->get('no_akun');
         $password = $request->get('password');
@@ -103,7 +108,7 @@ class IndexController extends Controller
         if(is_null($members)){
             return redirect()->back()->with('errors', 'yah ! akun anda belum tervalidasi');
         }else{
-            return view('content.konten-account',['kurses' => $kurses, 'supports' => $supports, 'testimonials' => $testimonials, 'members' => $members] );
+            return view('content.konten-account',['kurses' => $kurses, 'supports' => $supports, 'testimonials' => $testimonials, 'flashes' => $flashes, 'members' => $members] );
         }
     }
 }

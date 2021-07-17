@@ -63,35 +63,6 @@ class IntroAdminSeeder extends Seeder
             ])->save();
         }
 
-        $dataRow = $this->dataRow($postDataType, 'created_at');
-        if (!$dataRow->exists) {
-            $dataRow->fill([
-                'type' => 'text',
-                'display_name' => 'Created At',
-                'required' => 1,
-                'browse' => 1,
-                'read' => 0,
-                'edit' => 0,
-                'add' => 0,
-                'delete' => 0,
-                'order' => 2,
-            ])->save();
-        }
-
-        $dataRow = $this->dataRow($postDataType, 'updated_at');
-        if (!$dataRow->exists) {
-            $dataRow->fill([
-                'type' => 'text',
-                'display_name' => 'Updated At',
-                'required' => 1,
-                'browse' => 0,
-                'read' => 0,
-                'edit' => 0,
-                'add' => 0,
-                'delete' => 0,
-                'order' => 3,
-            ])->save();
-        }
 
         Permission::generateFor('intros');
     }

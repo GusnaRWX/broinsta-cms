@@ -17,8 +17,9 @@ class NewsController extends Controller
         $kurses = Kurse::all();
         $supports = Support::all();
         $testimonials = Testimonial::all();
+        $flashes = Post::all();
         $posts = Post::where('slug', $slug)->firstOrFail();
        // dd($posts);
-        return view('content.news.news', ['kurses' => $kurses, 'supports' => $supports, 'testimonials' => $testimonials, 'posts' => $posts]);
+        return view('content.news.news', ['kurses' => $kurses, 'flashes' => $flashes, 'supports' => $supports, 'testimonials' => $testimonials, 'posts' => $posts]);
     }
 }

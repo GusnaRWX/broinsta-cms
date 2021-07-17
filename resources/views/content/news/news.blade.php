@@ -30,7 +30,7 @@
                 <div class="tab-pane active" id="home" role="tabpanel">
 
                     <div class="imgIbinstaforex">
-                        <img src="{{$posts->image}}" alt="" style="width:100%; height:420px; border-radius:8px;">
+                        <img src="{{Storage::url($posts->image)}}" alt="" style="width:100%; height:420px; border-radius:8px;">
                     </div>
 
                     <div class="text-left">

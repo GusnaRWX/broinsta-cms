@@ -15,7 +15,8 @@ class PembukaanAkunController extends Controller
         $kurses = Kurse::all();
         $supports = Support::all();
         $testimonials = Testimonial::all();
-        return view('content.pembukaan-akun', ['kurses' => $kurses, 'supports' => $supports, 'testimonials' => $testimonials]);
+        $flashes = Post::all();
+        return view('content.pembukaan-akun', ['kurses' => $kurses, 'flashes' => $flashes,'supports' => $supports, 'testimonials' => $testimonials]);
     }
 
 }

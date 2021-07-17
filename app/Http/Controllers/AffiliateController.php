@@ -16,13 +16,15 @@ class AffiliateController extends Controller
         $kurses = Kurse::all();
         $supports = Support::all();
         $testimonials = Testimonial::all();
-        return view('content.affiliate', ['kurses' => $kurses, 'supports' => $supports, 'testimonials' => $testimonials]);
+        $flashes = Post::all();
+        return view('content.affiliate', ['kurses' => $kurses, 'flashes' => $flashes,'supports' => $supports, 'testimonials' => $testimonials]);
     }
 
     public function checkAffiliate(Request $request){
         $kurses = Kurse::all();
         $supports = Support::all();
         $testimonials = Testimonial::all();
+        $flashes = Post::all();
 
         $login = $request->get('login');
         $password = $request->get('password');
@@ -48,7 +50,7 @@ class AffiliateController extends Controller
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('passkey: '.$token));
         $result = curl_exec($ch);
         if($result == "true"){
-            return view('content.affiliate-success', ['kurses' => $kurses, 'supports' => $supports, 'testimonials' => $testimonials]);
+            return view('content.affiliate-success', ['kurses' => $kurses, 'flashes' => $flashes, 'supports' => $supports, 'testimonials' => $testimonials]);
         }else{
             return redirect()->back()->with('errors', 'yah ! akun anda tidak terdaftar di partner kami');
         }

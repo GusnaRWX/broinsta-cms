@@ -16,31 +16,36 @@ class ContentController extends Controller
         $kurses = Kurse::all();
         $supports = Support::all();
         $testimonials = Testimonial::all();
-        return view('content.instaforex', ['kurses' => $kurses, 'supports' => $supports, 'testimonials' => $testimonials]);
+        $flashes = Post::all();
+        return view('content.instaforex', ['kurses' => $kurses, 'flashes' => $flashes, 'supports' => $supports, 'testimonials' => $testimonials]);
     }
 
     public function getValidasiAkun(){
         $kurses = Kurse::all();
         $supports = Support::all();
         $testimonials = Testimonial::all();
-        return view('content.validasi-akun', ['kurses' => $kurses, 'supports' => $supports, 'testimonials' => $testimonials]);
+        $flashes = Post::all();
+        return view('content.validasi-akun', ['kurses' => $kurses, 'flashes' => $flashes, 'supports' => $supports, 'testimonials' => $testimonials]);
     }
     public function getVerifikasi(){
         $kurses = Kurse::all();
         $supports = Support::all();
         $testimonials = Testimonial::all();
-        return view('content.verifikasi-akun', ['kurses' => $kurses, 'supports' => $supports, 'testimonials' => $testimonials]);
+        $flashes = Post::all();
+        return view('content.verifikasi-akun', ['kurses' => $kurses, 'flashes' => $flashes, 'supports' => $supports, 'testimonials' => $testimonials]);
     }
     public function getWithdraw(){
         $kurses = Kurse::all();
         $supports = Support::all();
         $testimonials = Testimonial::all();
-        return view('content.withdrawal', ['kurses' => $kurses, 'supports' => $supports, 'testimonials' => $testimonials]);
+        $flashes = Post::all();
+        return view('content.withdrawal', ['kurses' => $kurses, 'flashes' => $flashes, 'supports' => $supports, 'testimonials' => $testimonials]);
     }
     public function getDisclaimer(){
         $kurses = Kurse::all();
         $supports = Support::all();
         $testimonials = Testimonial::all();
-        return view('content.disclaimer', ['kurses' => $kurses, 'supports' => $supports, 'testimonials' => $testimonials]);
+        $flashes = Post::all();
+        return view('content.disclaimer', ['kurses' => $kurses, 'flashes' => $flashes, 'supports' => $supports, 'testimonials' => $testimonials]);
     }
 }

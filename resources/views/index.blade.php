@@ -83,13 +83,10 @@
                     <span><b>New flash</b> </span>
                     <span class="ml-4">Penting : </span>
                     <ul>
-
-                        <li><a href="#">Jokowi mining</a></li>
-                        <li><a href="#">Broinsta bagi bagi coin</a></li>
-                        <li><a href="#">Text 3 - Short Description</a></li>
-                        <li><a href="#">Text 4 - Short Description</a></li>
+                        @foreach ($flashes as $flash)
+                        <li><a href="{{route('news.detail', $flash->slug)}}">{{ $flash->title}}</a></li>
+                        @endforeach
                     </ul>
-
                 </div>
             </div>
             <div class="col-md-3">
@@ -144,7 +141,6 @@
                                             <td>{{ $kurse->title }}</td>
                                             <td>{{ $kurse->deposit }}</td>
                                             <td>{{ $kurse->withdraw }}</td>
-
                                         </tr>
                                         @endforeach
                                     </tbody>

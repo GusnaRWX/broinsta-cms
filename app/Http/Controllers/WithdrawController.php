@@ -17,6 +17,7 @@ class WithdrawController extends Controller
         $kurses = Kurse::all();
         $supports = Support::all();
         $testimonials = Testimonial::all();
+        $flashes = Post::all();
 
         $login = $request->get('no_akun');
         $password = $request->get('password');
@@ -48,7 +49,7 @@ class WithdrawController extends Controller
             $withdraw->save();
             $id = Withdraw::where('no_akun', $login)->first()->id;
             $draws = Withdraw::findOrFail($id);
-            return view('content.konten-withdraw', ['kurses' => $kurses, 'supports' => $supports, 'testimonials' => $testimonials, 'draws' => $draws]);
+            return view('content.konten-withdraw', ['kurses' => $kurses, 'flashes' => $flashes, 'supports' => $supports, 'testimonials' => $testimonials, 'draws' => $draws]);
         }else{
             return redirect()->back()->with('errors', 'yah ! akun anda tidak ada di partner kami');
         }

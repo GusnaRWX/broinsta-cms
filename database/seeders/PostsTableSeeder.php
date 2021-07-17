@@ -242,35 +242,7 @@ class PostsTableSeeder extends Seeder
             ])->save();
         }
 
-        $dataRow = $this->dataRow($postDataType, 'created_at');
-        if (!$dataRow->exists) {
-            $dataRow->fill([
-                'type'         => 'timestamp',
-                'display_name' => __('voyager::seeders.data_rows.created_at'),
-                'required'     => 0,
-                'browse'       => 1,
-                'read'         => 1,
-                'edit'         => 0,
-                'add'          => 0,
-                'delete'       => 0,
-                'order'        => 12,
-            ])->save();
-        }
 
-        $dataRow = $this->dataRow($postDataType, 'updated_at');
-        if (!$dataRow->exists) {
-            $dataRow->fill([
-                'type'         => 'timestamp',
-                'display_name' => __('voyager::seeders.data_rows.updated_at'),
-                'required'     => 0,
-                'browse'       => 0,
-                'read'         => 0,
-                'edit'         => 0,
-                'add'          => 0,
-                'delete'       => 0,
-                'order'        => 13,
-            ])->save();
-        }
 
         $dataRow = $this->dataRow($postDataType, 'seo_title');
         if (!$dataRow->exists) {
@@ -283,7 +255,7 @@ class PostsTableSeeder extends Seeder
                 'edit'         => 1,
                 'add'          => 1,
                 'delete'       => 1,
-                'order'        => 14,
+                'order'        => 12,
             ])->save();
         }
         $dataRow = $this->dataRow($postDataType, 'featured');
@@ -297,7 +269,7 @@ class PostsTableSeeder extends Seeder
                 'edit'         => 1,
                 'add'          => 1,
                 'delete'       => 1,
-                'order'        => 15,
+                'order'        => 13,
             ])->save();
         }
 

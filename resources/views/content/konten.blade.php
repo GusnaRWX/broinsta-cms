@@ -240,7 +240,7 @@
 
                         <div class="col-md-6">
                             <div class="imgIbinstaforex">
-                                <img src="{{$post->image}}" alt="" style="width:100%; border-radius:8px;">
+                                <img src="{{Storage::url($post->image)}}" alt="" style="width:100%; border-radius:8px;">
                             </div>
                             <div class="titleIbinstaforex">
                                 <a href="{{route('news.detail', $post->slug)}}">
@@ -266,7 +266,9 @@
             <div class="row">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <span class="img-modal">
-                    <img src="{{ asset('assets/img/about.jpg') }}" alt="">
+                    @foreach ($intros as $intro)
+                    <img src="{{Storage::url($intro->image)}}" alt="">
+                    @endforeach
                 </span>
             </div>
         </div>
@@ -283,23 +285,6 @@
   $('#tallModal').modal('show');
 });
 </script>
-
-<div id="tallModal" class="modal modal-wide fade">
-    <div class="modal-dialog">
-      <div class="modal-content">
-
-        <div class="modal-body">
-            <div class="row">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <span class="img-modal">
-                    <img src="{{ asset('assets/img/about.jpg') }}" alt="">
-                </span>
-            </div>
-        </div>
-
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
 
   <script src="{{ asset('assets/vendor/jquery/jquery.min.js') }}"></script>
   <script>
